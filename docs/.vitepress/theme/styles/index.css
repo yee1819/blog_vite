@@ -1,0 +1,62 @@
+/* .vitepress\theme\style\var.css */
+/* 提示框背景颜色 */
+:root {
+  --vp-custom-block-tip-bg: var(--vp-c-green-soft);
+}
+
+/* 提示框 */
+.custom-block.tip {
+  border-color: var(--vp-c-green-2);
+}
+
+/* 警告框 */
+.custom-block.warning {
+  /* border-color: #d97706; */
+  border-color: var(--vp-c-yellow-2);
+}
+
+/* 危险框 */
+.custom-block.danger {
+  /* border-color: #f43f5e; */
+  border-color: var(--vp-c-red-2);
+}
+
+/* 引用块 */
+.vp-doc blockquote {
+  border-radius: 5px;
+  padding: 10px 16px;
+  background-color: #f3f0ff;
+  position: relative;
+  border-left: 5px solid #a68bff;
+}
+
+
+/*
+*{
+    font-family:"LXGW WenKai Screen" ;
+
+}
+
+
+p,span,.title[data-v-29ec59c0],.text[data-v-3db96182],.VPButton.medium[data-v-2dba8ca9]{
+	font-size: 18px;
+}
+span.clip{
+
+font-size: 56px;
+}
+.title[data-v-549c013f]{
+	
+
+font-size: 22px;
+}
+
+.VPButton.medium[data-v-2dba8ca9] {
+    border-radius: 50px;
+ 	line-height: 48px;
+}
+
+
+code span,.text[data-v-3db96182]{
+	font-size: 15px;
+}*/
