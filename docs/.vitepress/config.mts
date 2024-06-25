@@ -76,6 +76,20 @@ export default withMermaid(
           { text: 'redis', link: '/Redis/' },
           { text: '安装', link: '/Redis/安装' },
           { text: '配置', link: '/Redis/配置' },
+          {
+            text:'基本命令以及五种数据类型'
+            ,link:'/Redis/command'
+            ,collapsed:true,
+            items:[
+              {text:'基本命令',link:'/Redis/command/基本命令'},
+              {text:'基本命令',link:'/Redis/command/String'},
+              {text:'基本命令',link:'/Redis/command/Hash'},
+              {text:'基本命令',link:'/Redis/command/List'},
+              {text:'基本命令',link:'/Redis/command/Set'},
+              {text:'基本命令',link:'/Redis/command/SortedSet'},
+            ]
+
+          }
         ],
 
 
