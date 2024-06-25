@@ -35,10 +35,10 @@ export default withMermaid(
         { text: '开始', link: '/main' },
         { text: '博客', link: 'http://kiko2568.top' }
       ],
-      outline:{
+      outline: {
         // level:[1,6],
-        level:"deep",//2，6
-        label:"目录"
+        level: "deep",//2，6
+        label: "目录"
       }
       ,
       sidebar: {
@@ -58,8 +58,9 @@ export default withMermaid(
 
               },
               { text: '数据库与Mysql', link: '/main' },
+              { text: "redis", link: '/Redis' },
               { text: 'SpringBoot', link: '/main' },
-              { text: 'Leet', link: '/api-examples' }
+              { text: 'Leet', link: '/api-examples' },
             ]
           }
         ],
@@ -70,6 +71,11 @@ export default withMermaid(
         '/spring/': [
           { text: '前言', link: '/spring/' },
           { text: 'SpringBoot', link: '/spring/SpringBoot入门' },
+        ],
+        '/Redis/': [
+          { text: 'redis', link: '/Redis/' },
+          { text: '安装', link: '/Redis/安装' },
+          { text: '配置', link: '/Redis/配置' },
         ],
 
 
