@@ -446,7 +446,15 @@ redis的列表类似双向队列，可以做到左右俩边的插入和删除
   
   
   
+  ---
   
+  redis 6.0以后还有新的语法
+  
+  Lmove：移动key1 的 左、右元素到key2 的 左右 位置
+  
+  LPOS：查找key中元素的索引，单个元素、多个元素的索引，指定第几次出现的索引等待
+  
+  具体参考[  List丨Commands | Docs (redis.io)](https://redis.io/docs/latest/commands/?group=list)
   
   
   
