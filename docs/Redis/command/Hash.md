@@ -4,7 +4,9 @@ title: Hash
 
 # Hash-哈希
 
+Redis hash 是一个 string 类型的 field（字段） 和 value（值） 的映射表，hash 特别适合用于存储对象。
 
+Redis 中每个 hash 可以存储 232 - 1 键值对（40多亿）。
 
 ## 常用命令
 
