@@ -77,9 +77,9 @@ export default withMermaid(
           { text: '安装', link: '/Redis/安装' },
           { text: '配置', link: '/Redis/配置' },
           {
-            text:'基本命令'
-            ,link:'/Redis/command'
-            ,collapsed:false,
+            text:'基本命令',
+            link:'/Redis/command',
+            collapsed:false,
             items:[
               {text:'通用命令',link:'/Redis/command/通用命令'},
               {text:'String（字符串）',link:'/Redis/command/String'},
@@ -88,8 +88,16 @@ export default withMermaid(
               {text:'Set（集合）',link:'/Redis/command/Set'},
               {text:'SortedSet（有序集合）',link:'/Redis/command/SortedSet'},
             ]
-
+          },
+          {
+            text:'java客户端',
+            link:'/Redis/JAVA',
+            items:[
+              {text:'Jedis',link:'/Redis/JAVA/Jedis'},
+              {text:'Spring整合',link:'/Redis/JAVA/Spring'} 
+            ]
           }
+
         ],
 
 
