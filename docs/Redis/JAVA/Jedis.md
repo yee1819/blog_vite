@@ -201,6 +201,8 @@ public class JedisTest {
     }
 ```
 
+此时的close方法并不是销毁jedis对象，而是放回连接词等待下一次的连接
+
 测试结果：
 
 ```sh
