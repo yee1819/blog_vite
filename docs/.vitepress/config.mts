@@ -59,7 +59,7 @@ export default withMermaid(
               },
               { text: '数据库与Mysql', link: '/main' },
               { text: "redis", link: '/Redis' },
-              { text: 'SpringBoot', link: '/main' },
+              { text: '软件测试', link: '/test' },
               { text: 'Leet', link: '/api-examples' },
             ]
           }
@@ -96,7 +96,35 @@ export default withMermaid(
               {text:'Jedis',link:'/Redis/JAVA/Jedis'},
               {text:'Spring整合',link:'/Redis/JAVA/Spring'} 
             ]
-          }
+          },
+          {
+            text:'实战',
+            link:'/Redis/实战/',
+            items:[
+              {text:'例一：Redis存储登录验证码+用户信息',link:'/Redis/实战/code'},
+              {
+                text:'例二：Redis缓存常见信息以及缓存策略',
+                link:'/Redis/实战/cache',
+                collapsed:true,
+                items:[
+                  {text:'缓存更新策略',link:''},
+                  {text:'缓存穿透',link:''},
+                  {text:'缓存雪崩',link:''},
+                  {text:'缓存击穿',link:''},
+                  {text:'封装Redis工具类',link:''}
+                ]
+              },
+              {
+                text:'例三 ：秒杀！'
+                ,link:'',
+                collapsed:true,
+                items:[
+                  //分布式锁    乐观锁    // 消息队列
+                ]
+              }
+            ]
+          },
+          
 
         ],
 
