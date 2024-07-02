@@ -107,11 +107,11 @@ export default withMermaid(
                 link:'/Redis/实战/cache',
                 collapsed:true,
                 items:[
-                  {text:'缓存更新策略',link:''},
-                  {text:'缓存穿透',link:''},
-                  {text:'缓存雪崩',link:''},
-                  {text:'缓存击穿',link:''},
-                  {text:'封装Redis工具类',link:''}
+                  {text:'缓存更新策略',link:'/Redis/实战/code/缓存更新策略'},
+                  {text:'缓存穿透',link:'/Redis/实战/code/缓存穿透'},
+                  {text:'缓存雪崩',link:'/Redis/实战/code/缓存雪崩'},
+                  {text:'缓存击穿',link:'/Redis/实战/code/缓存击穿'},
+                  {text:'封装Redis工具类',link:'/Redis/实战/code/RedisUtil'}
                 ]
               },
               {
