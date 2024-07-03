@@ -103,22 +103,23 @@ export default withMermaid(
             items:[
               {text:'例一：Redis存储登录验证码+用户信息',link:'/Redis/实战/code'},
               {
-                text:'例二：Redis缓存常见信息以及缓存策略',
+                text:'例二：Redis缓存常见信息',
                 link:'/Redis/实战/cache',
-                collapsed:true,
+                // collapsed:true,
                 items:[
-                  {text:'缓存更新策略',link:'/Redis/实战/code/缓存更新策略'},
-                  {text:'缓存穿透',link:'/Redis/实战/code/缓存穿透'},
-                  {text:'缓存雪崩',link:'/Redis/实战/code/缓存雪崩'},
-                  {text:'缓存击穿',link:'/Redis/实战/code/缓存击穿'},
-                  {text:'封装Redis工具类',link:'/Redis/实战/code/RedisUtil'}
+                  {text:'缓存更新策略',link:'/Redis/实战/cache/缓存更新策略'},
+                  {text:'缓存穿透',link:'/Redis/实战/cache/缓存穿透'},
+                  {text:'缓存雪崩',link:'/Redis/实战/cache/缓存雪崩'},
+                  {text:'缓存击穿',link:'/Redis/实战/cache/缓存击穿'},
+                  {text:'封装Redis工具类',link:'/Redis/实战/cache/RedisUtil'}
                 ]
               },
               {
                 text:'例三 ：秒杀！'
-                ,link:'',
+                ,link:'/Redis/Spikes/',
                 collapsed:true,
                 items:[
+
                   //分布式锁    乐观锁    // 消息队列
                 ]
               }

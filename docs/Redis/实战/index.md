@@ -2,7 +2,7 @@
 
 ::: info 
 
-基于[黑马Rdis](https://www.bilibili.com/video/BV1cr4y1671t/)
+基于[黑马Rdis](https://www.bilibili.com/video/BV1cr4y1671t/)实战篇书写笔记
 
 :::
 
