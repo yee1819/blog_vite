@@ -116,10 +116,12 @@ export default withMermaid(
               },
               {
                 text:'例三 ：秒杀！'
-                ,link:'/Redis/Spikes/',
+                ,link:'/Redis/实战/Spikes/',
                 collapsed:true,
                 items:[
-
+                    {text:"全局ID生成器",link:"/Redis/实战/Spikes/id"},
+                    {text:"优惠卷秒杀",link:"/Redis/实战/Spikes/秒杀"},
+                    
                   //分布式锁    乐观锁    // 消息队列
                 ]
               }
