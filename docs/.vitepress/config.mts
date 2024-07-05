@@ -127,6 +127,7 @@ export default withMermaid(
                       collapsed:true,
                       items:[
                         {text:"IDEA模拟分布式多系统",link:"/Redis/实战/Spikes/Distributed/IDEA"},
+                        {text:"分布式锁与redis实现",link:"/Redis/实战/Spikes/Distributed/base"},
                       ]
                     },
 

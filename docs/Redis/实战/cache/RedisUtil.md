@@ -162,7 +162,13 @@ Shop shop4 = cacheClient.queryWithLogicalExpire(RedisConstants.CACHE_SHOP_KEY, i
 
 
 
+::: tip
 
+搭配自定义注解、`@Bean`、可以做成一个注解包
+
+配合自动装配原理可以成为工具包
+
+:::
 
 
 
