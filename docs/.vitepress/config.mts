@@ -121,7 +121,15 @@ export default withMermaid(
                 items:[
                     {text:"全局ID生成器",link:"/Redis/实战/Spikes/id"},
                     {text:"优惠卷秒杀",link:"/Redis/实战/Spikes/秒杀"},
-                    
+                    {
+                      text:"分布式环境中",
+                      link:"/Redis/实战/Spikes/Distributed",
+                      collapsed:true,
+                      items:[
+                        {text:"IDEA模拟分布式多系统",link:"/Redis/实战/Spikes/Distributed/IDEA"},
+                      ]
+                    },
+
                   //分布式锁    乐观锁    // 消息队列
                 ]
               }
