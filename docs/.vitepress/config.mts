@@ -128,6 +128,18 @@ export default withMermaid(
                       items:[
                         {text:"IDEA模拟分布式多系统",link:"/Redis/实战/Spikes/Distributed/IDEA"},
                         {text:"分布式锁与redis实现",link:"/Redis/实战/Spikes/Distributed/base"},
+                        {text:'Lua脚本',link:'/Redis/实战/Spikes/Distributed/Lua'},
+                        {text:'Redis与lua',link:'/Redis/实战/Spikes/Distributed/redisWithLua'},
+                        {text:'spring与lua',link:'/Redis/实战/Spikes/Distributed/SpringWithLua'},
+                        {
+                          text:'Redisson'
+                          ,link:'/Redis/实战/Spikes/Distributed/Redisson'
+                          ,collapsed:true
+                          ,items:[
+                            
+                          ]
+
+                        }
                       ]
                     },
 

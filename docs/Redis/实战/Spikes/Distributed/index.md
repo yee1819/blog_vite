@@ -29,4 +29,20 @@
 
 对分布式集群要一个统一管理锁的地方
 
+```mermaid
+sequenceDiagram
+ 	participant a as 线程a
+ 	participant s as 第三方锁监视器 	
+ 	participant b as 线程b
+	a->>s: 尝试获得锁
+	note over a,s: 线程a获得锁
+	b->>s: 尝试获得锁
+	note over b,s: 线程b获取锁失败
+	a-->>s: 释放锁
+	b-->>s: 再次尝试获得锁
+	note over b,s: 线程b获得锁
+```
+
+
+
 于是乎  Redis  登场了
