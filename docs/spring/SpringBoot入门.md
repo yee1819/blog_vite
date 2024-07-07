@@ -24,7 +24,7 @@ Bean对象：IOC容器中创建管理的对象为Bean
 
 - `@Repository`持久层
 
-- `Controller` 控制层
+- `@Controller` 控制层
 - `@Service`服务层
 
 其中控制层`@RestController`=`@ResponseBody`+`@Controller`,使用`@RestController`就可以了
@@ -50,6 +50,20 @@ SpringBoot 默认扫描启动类当前包以及子包
 ### 获取Bean
 
 #### 自动配置的三种方法
+
+> 想要自动配置，类上一定要有被String容器标记为Bean的`@Component`及其子注解或配置类`@Configuration`
+>
+> 例如：
+>
+> ```java
+> public class LoginInterceptor implements HandlerInterceptor {
+> 
+> //    @Resource
+>     StringRedisTemplate stringRedisTemplate;
+> }
+> ```
+>
+> 这个例子中`LoginInterceptor`没有`@Component`注解，不是Bean，不可以使用自动配置
 
 ##### `@AUtowired`
 
@@ -366,9 +380,10 @@ com.kirari.dashijian.service.impl.t2@4e773b8a
 
 #### `@Resource`和`@Autowired`、`@Inject`的区别
 
+- 提供的依赖不同
 
-
-
+- 自动获得的逻辑不同
+- ....
 
 
 
@@ -533,13 +548,15 @@ public class t2 implements Tttest {
 
 #### 自定义注解
 
+TODO
 
+- [ ] 待续...不过也不用续
 
 
 
 #### 自动配置原理
 
-
+- [ ] TODO待续
 
 
 
@@ -1421,11 +1438,13 @@ HMACSHA256(
 - 将返回值直接响应，如果是对象、集合，自动转化为json格式
 - `@RestController`=`@ResponseBody`+`@Controller`
 
+---
 
 
-统一响应结果:
 
-Result(code,message,data)	
+统一响应结果:返回给前端时给前端一个统一的格式
+
+Result(code,message,data)	类
 
 其中：code为状态码，200成功，404资源找不到之类
 
@@ -2870,6 +2889,8 @@ public class OrderAop {
 
 ## SpringDATA自动设置CRUD
 
+JPA
+
 依赖
 
 ```xml
@@ -3438,7 +3459,7 @@ User:
       address: gx
 ```
 
-启动类配置
+启动类需要配置
 
 ```java
 @SpringBootApplication
@@ -4199,6 +4220,49 @@ public class User {
 
 
 
+### SpringDoc 生成API文档
+
+pom.xml中引入依赖
+
+```xml
+<dependency>
+    <groupId>org.springdoc</groupId>
+    <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+    <version>2.0.4</version>
+</dependency>
+```
+
+
+
+声明配置类
+
+```java
+@Configuration
+public class SwaggerConig {
+
+    @Bean
+    public GroupedOpenApi publicApi() {
+        return GroupedOpenApi.builder()
+                .group("public")
+                .pathsToMatch("/**")
+                .build();
+    }
+
+    @Bean
+    public Info apiInfo() {
+        return new Info()
+                .title("接口测试")
+                .version("1.0")
+                .description("这是测试一下啊")
+                .license(new License().name("Apache 2.0").url("http://springdoc.org"));
+    }
+}
+```
+
+输入`localhost:端口号/swagger-ui/index.html`访问api文档
+
+![SpringDoc的API](https://yee-1312555989.cos.ap-guangzhou.myqcloud.com//blogimage-20240615142713906.webp)
+
 ### Swagger 生成API文档
 
 Spring整合swagger
@@ -4215,13 +4279,83 @@ meavn引入依赖
 </dependency>
 ```
 
+设置配置类
 
+```java
+@Configuration
+@Slf4j
+public class WebMvcConfiguration extends WebMvcConfigurationSupport {
+    /**
+     * 通过knife4j生成接口文档
+     * @return
+     */
+    @Bean
+    public Docket docket() {
+        ApiInfo apiInfo = new ApiInfoBuilder()
+                .title("苍穹外卖项目接口文档")
+                .version("2.0")
+                .description("苍穹外卖项目接口文档")
+                .build();
+        Docket docket = new Docket(DocumentationType.SWAGGER_2)
+                .apiInfo(apiInfo)
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("com.sky.controller"))
+                .paths(PathSelectors.any())
+                .build();
+        return docket;
+    }
 
+    /**
+     * 设置静态资源映射
+     * @param registry
+     */
+    protected void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/doc.html").addResourceLocations("classpath:/META-INF/resources/");
+        registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
+    }
+}
+```
 
+用这个源码成功了，自己配置 的时候失败了....
 
 #### 常用注解
 
-| 注解 | 作用 |
-| ---- | ---- |
-| @Api |      |
+| 注解              | 作用                                         |
+| ----------------- | -------------------------------------------- |
+| @Api              | 用在类上，例如Controller                     |
+| @ApiOperation     | 用在方法上Controller的某个方法标注是什么方法 |
+| @ApiModelProperty | 用在实体类的属性上                           |
+| @ApiModel         | 用在实体类上                                 |
 
+示例：
+
+```java
+@Api(tags = "员工管理")
+@RestController
+public class EmployeeController {
+
+    @ApiOperation("这个是登录接口")
+    @PostMapping("/login")
+    public Result<EmployeeLoginVO> login(@RequestBody EmployeeLoginDTO employeeLoginDTO) 
+```
+
+![image-20240615154342042](https://yee-1312555989.cos.ap-guangzhou.myqcloud.com//blogimage-20240615154342042.webp)
+
+实体类上
+
+```java
+@ApiModel(description = "员工登录时传递的数据模型")
+public class EmployeeLoginDTO implements Serializable {
+
+    @ApiModelProperty("用户名")
+    private String username;
+
+    @ApiModelProperty("密码")
+    private String password;
+
+}
+```
+
+效果：
+
+![image-20240615154442397](https://yee-1312555989.cos.ap-guangzhou.myqcloud.com//blogimage-20240615154442397.webp)

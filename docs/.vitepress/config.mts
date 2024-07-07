@@ -130,15 +130,29 @@ export default withMermaid(
                         {text:"分布式锁与redis实现",link:"/Redis/实战/Spikes/Distributed/base"},
                         {text:'Lua脚本',link:'/Redis/实战/Spikes/Distributed/Lua'},
                         {text:'Redis与lua',link:'/Redis/实战/Spikes/Distributed/redisWithLua'},
-                        {text:'spring与lua',link:'/Redis/实战/Spikes/Distributed/SpringWithLua'},
+                        {text:'原子性',link:'/Redis/实战/Spikes/Distributed/原子性'},
+                        {text:'spring与lua与redis',link:'/Redis/实战/Spikes/Distributed/SpringWithLua'},
                         {
                           text:'Redisson'
-                          ,link:'/Redis/实战/Spikes/Distributed/Redisson'
+                          ,link:'/Redis/实战/Spikes/Distributed/Redisson/'
                           ,collapsed:true
                           ,items:[
-                            
+                            {text:"不可重入及解决原理与Redisson底层",link:'/Redis/实战/Spikes/Distributed/Redisson/不可重入'},
+                            {text:'redission源码解析与解决问题',link:'/Redis/实战/Spikes/Distributed/Redisson/redission源码'},
+                            {text:'异步秒杀',link:'/Redis/实战/Spikes/Distributed/Redisson/异步'}
                           ]
 
+                        },
+                        {
+                          text:'消息队列',
+                          link:'/Redis/实战/Spikes/Distributed/mq',
+                          collapsed:true,
+                          items:[
+                           { text:'List模拟mq',link:'/Redis/实战/Spikes/Distributed/mq/List'},
+                           
+                           { text:'PubSub实现mq',link:'/Redis/实战/Spikes/Distributed/mq/PubSub'},
+                           { text:'Stream实现mq',link:'/Redis/实战/Spikes/Distributed/mq/Stream'},
+                          ]
                         }
                       ]
                     },
