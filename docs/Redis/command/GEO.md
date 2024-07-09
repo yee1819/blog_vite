@@ -174,7 +174,7 @@ GEO，地理信息定位，是redis的一个特殊数据结构，使用ZSet进�
 - storedist key：将返回结果离中心节点的距离保存到指定键。
 
 
-```bash
+```bash{1,3,6,11,14,16}
 127.0.0.1:6379>  GEORADIUSBYMEMBER cities:locations beijing 100 km store k1
 (integer) 2
 127.0.0.1:6379> zrange k1 0 -1
