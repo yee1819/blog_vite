@@ -111,7 +111,7 @@ GEO，地理信息定位，是redis的一个特殊数据结构，使用ZSet进�
 
 - `WITHCOORD`：返回坐标值
 
-  ```bash
+```bash
   127.0.0.1:6379> GEORADIUSBYMEMBER cities:locations beijing 100 km WITHCOORD
   1) 1) "beijing"
      2) 1) "116.28000229597092"
@@ -119,38 +119,38 @@ GEO，地理信息定位，是redis的一个特殊数据结构，使用ZSet进�
   2) 1) "tianjin"
      2) 1) "117.12000042200089"
         2) "39.080000053576654"
-  ```
+```
 
 - `WITHDIST`：返回离member的距离
 
-  ```bash
+```bash
   127.0.0.1:6379> GEORADIUSBYMEMBER cities:locations beijing 100 km WITHDIST
   1) 1) "beijing"
      2) "0.0000"
   2) 1) "tianjin"
      2) "89.2061"
-  ```
+```
 
 - `WITHHASH`：返回哈希编码
 
-  ```bash
+```bash
   127.0.0.1:6379> GEORADIUSBYMEMBER cities:locations beijing 100 km WITHHASH
   1) 1) "beijing"
      2) (integer) 4069140618056030
   2) 1) "tianjin"
      2) (integer) 4069185565231353
-  ```
+```
 
 - `[COUNT count]`：设定返回的条数
 
-  ```bash
+```bash
   127.0.0.1:6379> GEORADIUSBYMEMBER cities:locations beijing 100 km count 1
   1) "beijing"
-  ```
+```
 
 - `[ASC|DESC]`：选择从大到小或者从小到大
 
-  ```bash{1,3,5,8}
+```bash{1,3,5,8}
   127.0.0.1:6379> GEORADIUSBYMEMBER cities:locations beijing 100 km count 1 asc
   1) "beijing"
 127.0.0.1:6379> GEORADIUSBYMEMBER cities:locations beijing 100 km count 1 desc
@@ -167,7 +167,7 @@ GEO，地理信息定位，是redis的一个特殊数据结构，使用ZSet进�
      2) "0.0000"
      3) 1) "116.28000229597092"
         2) "39.550000724547083"
-  ```
+```
 
 - store key：将返回结果的地理位置信息保存到指定键；
 
@@ -213,10 +213,7 @@ GEO，地理信息定位，是redis的一个特殊数据结构，使用ZSet进�
 
 
 
-`GEOSEARCH key <FROMMEMBER member | FROMLONLAT longitude latitude>
-  <BYRADIUS radius <M | KM | FT | MI> | BYBOX width height <M | KM |
-  FT | MI>> [ASC | DESC] [COUNT count [ANY]] [WITHCOORD] [WITHDIST]
-  [WITHHASH]`
+`GEOSEARCH key <FROMMEMBER member | FROMLONLAT longitude latitude><BYRADIUS radius <M | KM | FT | MI> | BYBOX width height <M | KM |FT | MI>> [ASC | DESC] [COUNT count [ANY]] [WITHCOORD] [WITHDIST][WITHHASH]`
 
 其中
 
