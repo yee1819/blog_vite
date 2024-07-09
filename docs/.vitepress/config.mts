@@ -54,13 +54,12 @@ export default withMermaid(
                   { text: 'java基础', link: "/java/" },
                   { text: 'SpringBoot', link: "/spring/" },
                 ]
-
-
               },
               { text: '数据库与Mysql', link: '/main' },
               { text: "redis", link: '/Redis' },
               { text: '软件测试', link: '/test' },
-              { text: 'Leet', link: '/api-examples' },
+              { text: 'SpringCloud', link: '/SpringCloud/' },
+
             ]
           }
         ],
@@ -87,9 +86,9 @@ export default withMermaid(
               { text: 'List（列表）', link: '/Redis/command/List' },
               { text: 'Set（集合）', link: '/Redis/command/Set' },
               { text: 'SortedSet（有序集合）', link: '/Redis/command/SortedSet' },
-              {text:'GEO（地理位置）',link:'/Redis/command/GEO'},
-              {text:'BitMap（位图）',link:'/Redis/command/BitMap'},
-              {text:'HypeLogLog',link:'/Redis/command/HyperLogLog'}
+              { text: 'GEO（地理位置）', link: '/Redis/command/GEO' },
+              { text: 'BitMap（位图）', link: '/Redis/command/BitMap' },
+              { text: 'HypeLogLog', link: '/Redis/command/HyperLogLog' }
             ]
           },
           {
@@ -175,24 +174,56 @@ export default withMermaid(
                     link: '/Redis/实战/type/set',
                     collapsed: true,
                     items: [
-                        {text:'点赞与取消点赞',link:'/Redis/实战/type/set/like'},
-                        {text:'排行榜',link:'/Redis/实战/type/set/rank'}
+                      { text: '点赞与取消点赞', link: '/Redis/实战/type/set/like' },
+                      { text: '排行榜', link: '/Redis/实战/type/set/rank' }
                     ]
                   }, {
                     text: 'GEO',
-                    link: '/Redis/实战/type/geo',
-                    collapsed:true,
-                    items:[
-
+                    link: '/Redis/command/GEO',
+                    collapsed: true,
+                    items: [
+                      { text: '查看附近商户距离且排序', link: '/Redis/实战/type/geo/附近' }
                     ]
-                  },
+                  }, {
+                    text: 'BitMap',
+                    link: '/Redis/command/BitMap',
+                    collapsed: true,
+                    items: [
+                      { text: '签到功能', link: '/Redis/实战/type/BitMap/签到' },
+                      { text: '本月连续签到', link: '/Redis/实战/type/BitMap/连续签到' },
+                    ]
+                  }, { text: 'HypeLogLog', link: '/Redis/command/HyperLogLog' }
+
                 ]
               }
             ]
-          },
+          }, {
+            text: '数据持久化', items: [
+              { text: 'RDB', link: '/Redis/high/持久化/RDB' },
+              { text: 'AOF', link: '/Redis/high/持久化/AOF' }
+            ]
+          }, {
+            text: '分布式'
+            , items: [
+
+            ]
+          }, {
+            text: '多级缓存'
+            , items: []
+          }, {
+            text: '最佳实践'
+            , items: []
+          }, {
+            text: '原理篇'
+            , items: []
+          }
 
 
         ],
+        '/SpringCloud/': [
+            {text:'微服务',link:'/SpringCloud/微服务'}
+        ],
+
 
 
 
