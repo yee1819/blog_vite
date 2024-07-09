@@ -77,92 +77,120 @@ export default withMermaid(
           { text: '安装', link: '/Redis/安装' },
           { text: '配置', link: '/Redis/配置' },
           {
-            text:'基本命令',
-            link:'/Redis/command',
-            collapsed:false,
-            items:[
-              {text:'通用命令',link:'/Redis/command/通用命令'},
-              {text:'String（字符串）',link:'/Redis/command/String'},
-              {text:'Hash（哈希键值对）',link:'/Redis/command/Hash'},
-              {text:'List（列表）',link:'/Redis/command/List'},
-              {text:'Set（集合）',link:'/Redis/command/Set'},
-              {text:'SortedSet（有序集合）',link:'/Redis/command/SortedSet'},
+            text: '基本命令',
+            link: '/Redis/command',
+            collapsed: false,
+            items: [
+              { text: '通用命令', link: '/Redis/command/通用命令' },
+              { text: 'String（字符串）', link: '/Redis/command/String' },
+              { text: 'Hash（哈希键值对）', link: '/Redis/command/Hash' },
+              { text: 'List（列表）', link: '/Redis/command/List' },
+              { text: 'Set（集合）', link: '/Redis/command/Set' },
+              { text: 'SortedSet（有序集合）', link: '/Redis/command/SortedSet' },
+              {text:'GEO（地理位置）',link:'/Redis/command/GEO'},
+              {text:'BitMap（位图）',link:'/Redis/command/BitMap'},
+              {text:'HypeLogLog',link:'/Redis/command/HyperLogLog'}
             ]
           },
           {
-            text:'java客户端',
-            link:'/Redis/JAVA',
-            items:[
-              {text:'Jedis',link:'/Redis/JAVA/Jedis'},
-              {text:'Spring整合',link:'/Redis/JAVA/Spring'} 
+            text: 'java客户端',
+            link: '/Redis/JAVA',
+            items: [
+              { text: 'Jedis', link: '/Redis/JAVA/Jedis' },
+              { text: 'Spring整合', link: '/Redis/JAVA/Spring' }
             ]
           },
           {
-            text:'实战',
-            link:'/Redis/实战/',
-            items:[
-              {text:'例一：Redis存储登录验证码+用户信息',link:'/Redis/实战/code'},
+            text: '实战',
+            link: '/Redis/实战/',
+            items: [
+              { text: '例一：Redis存储登录验证码+用户信息', link: '/Redis/实战/code' },
               {
-                text:'例二：Redis缓存常见信息',
-                link:'/Redis/实战/cache',
+                text: '例二：Redis缓存常见信息',
+                link: '/Redis/实战/cache',
                 // collapsed:true,
-                items:[
-                  {text:'缓存更新策略',link:'/Redis/实战/cache/缓存更新策略'},
-                  {text:'缓存穿透',link:'/Redis/实战/cache/缓存穿透'},
-                  {text:'缓存雪崩',link:'/Redis/实战/cache/缓存雪崩'},
-                  {text:'缓存击穿',link:'/Redis/实战/cache/缓存击穿'},
-                  {text:'封装Redis工具类',link:'/Redis/实战/cache/RedisUtil'}
+                items: [
+                  { text: '缓存更新策略', link: '/Redis/实战/cache/缓存更新策略' },
+                  { text: '缓存穿透', link: '/Redis/实战/cache/缓存穿透' },
+                  { text: '缓存雪崩', link: '/Redis/实战/cache/缓存雪崩' },
+                  { text: '缓存击穿', link: '/Redis/实战/cache/缓存击穿' },
+                  { text: '封装Redis工具类', link: '/Redis/实战/cache/RedisUtil' }
                 ]
               },
               {
-                text:'例三 ：秒杀！'
-                ,link:'/Redis/实战/Spikes/',
-                collapsed:true,
-                items:[
-                    {text:"全局ID生成器",link:"/Redis/实战/Spikes/id"},
-                    {text:"优惠卷秒杀",link:"/Redis/实战/Spikes/秒杀"},
-                    {
-                      text:"分布式环境中",
-                      link:"/Redis/实战/Spikes/Distributed",
-                      collapsed:true,
-                      items:[
-                        {text:"IDEA模拟分布式多系统",link:"/Redis/实战/Spikes/Distributed/IDEA"},
-                        {text:"分布式锁与redis实现",link:"/Redis/实战/Spikes/Distributed/base"},
-                        {text:'Lua脚本',link:'/Redis/实战/Spikes/Distributed/Lua'},
-                        {text:'Redis与lua',link:'/Redis/实战/Spikes/Distributed/redisWithLua'},
-                        {text:'原子性',link:'/Redis/实战/Spikes/Distributed/原子性'},
-                        {text:'spring与lua与redis',link:'/Redis/实战/Spikes/Distributed/SpringWithLua'},
-                        {
-                          text:'Redisson'
-                          ,link:'/Redis/实战/Spikes/Distributed/Redisson/'
-                          ,collapsed:true
-                          ,items:[
-                            {text:"不可重入及解决原理与Redisson底层",link:'/Redis/实战/Spikes/Distributed/Redisson/不可重入'},
-                            {text:'redission源码解析与解决问题',link:'/Redis/实战/Spikes/Distributed/Redisson/redission源码'},
-                            {text:'异步秒杀',link:'/Redis/实战/Spikes/Distributed/Redisson/异步'}
-                          ]
+                text: '例三 ：秒杀！'
+                , link: '/Redis/实战/Spikes/',
+                collapsed: true,
+                items: [
+                  { text: "全局ID生成器", link: "/Redis/实战/Spikes/id" },
+                  { text: "优惠卷秒杀", link: "/Redis/实战/Spikes/秒杀" },
+                  {
+                    text: "分布式环境中",
+                    link: "/Redis/实战/Spikes/Distributed",
+                    collapsed: true,
+                    items: [
+                      { text: "IDEA模拟分布式多系统", link: "/Redis/实战/Spikes/Distributed/IDEA" },
+                      { text: "分布式锁与redis实现", link: "/Redis/实战/Spikes/Distributed/base" },
+                      { text: 'Lua脚本', link: '/Redis/实战/Spikes/Distributed/Lua' },
+                      { text: 'Redis与lua', link: '/Redis/实战/Spikes/Distributed/redisWithLua' },
+                      { text: '原子性', link: '/Redis/实战/Spikes/Distributed/原子性' },
+                      { text: 'spring与lua与redis', link: '/Redis/实战/Spikes/Distributed/SpringWithLua' },
+                      {
+                        text: 'Redisson'
+                        , link: '/Redis/实战/Spikes/Distributed/Redisson/'
+                        , collapsed: true
+                        , items: [
+                          { text: "不可重入及解决原理与Redisson底层", link: '/Redis/实战/Spikes/Distributed/Redisson/不可重入' },
+                          { text: 'redission源码解析与解决问题', link: '/Redis/实战/Spikes/Distributed/Redisson/redission源码' },
+                          { text: '异步秒杀', link: '/Redis/实战/Spikes/Distributed/Redisson/异步' }
+                        ]
 
-                        },
-                        {
-                          text:'消息队列',
-                          link:'/Redis/实战/Spikes/Distributed/mq',
-                          collapsed:true,
-                          items:[
-                           { text:'List模拟mq',link:'/Redis/实战/Spikes/Distributed/mq/List'},
-                           
-                           { text:'PubSub实现mq',link:'/Redis/实战/Spikes/Distributed/mq/PubSub'},
-                           { text:'Stream实现mq',link:'/Redis/实战/Spikes/Distributed/mq/Stream'},
-                          ]
-                        }
-                      ]
-                    },
+                      },
+                      {
+                        text: '消息队列',
+                        link: '/Redis/实战/Spikes/Distributed/mq',
+                        collapsed: true,
+                        items: [
+                          { text: 'List模拟mq', link: '/Redis/实战/Spikes/Distributed/mq/List' },
+
+                          { text: 'PubSub实现mq', link: '/Redis/实战/Spikes/Distributed/mq/PubSub' },
+                          { text: 'Stream实现mq单消费', link: '/Redis/实战/Spikes/Distributed/mq/Stream单消费' },
+                          { text: 'Stream消费组', link: '/Redis/实战/Spikes/Distributed/mq/Stream消费组' },
+                          { text: 'Stream异步秒杀', link: '/Redis/实战/Spikes/Distributed/mq/Stream的异步秒杀' }
+                        ]
+                      }
+                    ]
+                  },
 
                   //分布式锁    乐观锁    // 消息队列
+                ]
+              },
+              {
+                text: '例四:其他数据类型的使用',
+                link: '/Redis/实战/type',
+                collapsed: true,
+                items: [
+                  {
+                    text: '集合与有序集合',
+                    link: '/Redis/实战/type/set',
+                    collapsed: true,
+                    items: [
+                        {text:'点赞与取消点赞',link:'/Redis/实战/type/set/like'},
+                        {text:'排行榜',link:'/Redis/实战/type/set/rank'}
+                    ]
+                  }, {
+                    text: 'GEO',
+                    link: '/Redis/实战/type/geo',
+                    collapsed:true,
+                    items:[
+
+                    ]
+                  },
                 ]
               }
             ]
           },
-          
+
 
         ],
 
@@ -223,6 +251,7 @@ export default withMermaid(
       sidebarMenuLabel: "菜单",
       returnToTopLabel: "回到顶部",
       externalLinkIcon: true,
+
 
 
 
