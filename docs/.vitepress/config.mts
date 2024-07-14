@@ -52,13 +52,14 @@ export default withMermaid(
                 collapsed: true,
                 items: [
                   { text: 'java基础', link: "/java/" },
+                  { text:' 持久层',link:'/java持久层框架/'},
                   { text: 'SpringBoot', link: "/spring/" },
+                  { text: 'SpringCloud', link: '/SpringCloud/' },
                 ]
               },
-              { text: '数据库与Mysql', link: '/main' },
-              { text: "redis", link: '/Redis' },
+              { text: '数据库', link: '/data' },
               { text: '软件测试', link: '/test' },
-              { text: 'SpringCloud', link: '/SpringCloud/' },
+            
 
             ]
           }
@@ -71,6 +72,23 @@ export default withMermaid(
           { text: '前言', link: '/spring/' },
           { text: 'SpringBoot', link: '/spring/SpringBoot入门' },
         ],
+        '/data':[
+          {
+            text:'关系型数据库',
+            items:[
+                {text:'MySql',link:'/MySql/'}
+            ]
+          },{
+            text:'非关系型数据库',
+            items:[
+              {text:'Redis',link:'/Redis/'}
+            ]
+          }
+        ],
+        '/MySql/':[
+          {text:'MySql',link:'/MySql/'},
+        ]
+        ,
         '/Redis/': [
           { text: 'redis', link: '/Redis/' },
           { text: '安装', link: '/Redis/安装' },
@@ -223,6 +241,24 @@ export default withMermaid(
         '/SpringCloud/': [
             {text:'微服务',link:'/SpringCloud/微服务'}
         ],
+        '/java持久层框架/':[
+          {
+            text:'Mybatis',
+            link:'/java持久层框架/mybatis/'
+          },
+          {
+            text:'Mybatis-plus',
+            link:'/java持久层框架/mybatis-plus/'
+          }
+        ],
+        '/java持久层框架/mybatis-plus/':[
+          {text:'介绍',link:'/java持久层框架/mybatis-plus/'},
+          {text:'入门',link:'/java持久层框架/mybatis-plus/入门'},
+          {text:'约定与配置',link:'/java持久层框架/mybatis-plus/约定与配置'},
+          {text:'复杂Sql',link:'/java持久层框架/mybatis-plus/复杂sql'},
+          {text:'Service接口',link:'/java持久层框架/mybatis-plus/Service接口'},
+
+        ]
 
 
 
