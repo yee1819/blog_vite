@@ -793,4 +793,4 @@ start和end可以使用`(`
 
 类似SCAN
 
-详细请看[SCAN](/Redis/command/通用命令#scan)
+详细请看[SCAN](/db/Redis/command/通用命令#scan)

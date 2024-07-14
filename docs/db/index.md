@@ -8,6 +8,6 @@
 
 ---
 
-目前学习了关系型数据库[Mysql](/MySql/)
+目前学习了关系型数据库[Mysql](/db/MySql/)
 
-以及非关系型数据库[Redis](/Redis/)
+以及非关系型数据库[Redis](/db/Redis/)

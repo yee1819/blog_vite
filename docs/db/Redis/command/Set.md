@@ -300,4 +300,4 @@ Redis 中集合是通过哈希表实现的，所以添加，删除，查找的�
 
 类似scan
 
-具体参考：[SCAN](/Redis/command/通用命令#scan)
+具体参考：[SCAN](/db/Redis/command/通用命令#scan)

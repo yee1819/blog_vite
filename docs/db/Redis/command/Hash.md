@@ -158,4 +158,4 @@ Redis 中每个 hash 可以存储 232 - 1 键值对（40多亿）。
 
   与scan差不多，用作迭代hash
 
-  参考[SCAN](/Redis/command/通用命令#scan)
+  参考[SCAN](/db/Redis/command/通用命令#scan)
