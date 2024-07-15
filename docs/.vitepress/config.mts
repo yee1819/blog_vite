@@ -261,7 +261,23 @@ export default withMermaid(
           { text: '约定与配置', link: '/java/java持久层框架/mybatis-plus/约定与配置' },
           { text: '复杂Sql', link: '/java/java持久层框架/mybatis-plus/复杂sql' },
           { text: 'Service接口', link: '/java/java持久层框架/mybatis-plus/Service接口' },
+          { text: 'Service接口的Lambda', link: '/java/java持久层框架/mybatis-plus/Lambda' },
+          { text: '批量新增', link: '/java/java持久层框架/mybatis-plus/批量新增' },
 
+          {
+            text: '扩展',
+            items: [
+              {text:'代码生成器',link:'/java/java持久层框架/mybatis-plus/extend/code'},
+              {text:'DB静态工具',link:'/java/java持久层框架/mybatis-plus/extend/db'},
+              {text:'逻辑删除',link:'/java/java持久层框架/mybatis-plus/extend/logic'},
+              {text:'枚举处理器',link:'/java/java持久层框架/mybatis-plus/extend/enum'},
+              {text:'JSON处理器',link:'/java/java持久层框架/mybatis-plus/extend/json'},
+              {text:'分页查询插件',link:'/java/java持久层框架/mybatis-plus/extend/page'},
+
+              {text:'Mybatis-Plus 其他插件',link:'/java/java持久层框架/mybatis-plus/extend/ohter'},
+              {text:'配置加密',link:'/java/java持久层框架/mybatis-plus/extend/password'}
+            ]
+          }
         ],
         '/java/Meavn/': [
           { text: '介绍', link: '/java/Meavn/' }

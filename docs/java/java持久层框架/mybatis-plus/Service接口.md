@@ -95,9 +95,7 @@ void testDelete(){
 
 ## 复杂sql
 
-可在service层中调用本身的mybatis-plus的service接口方法，并调用mapper进行xml或注解制作复杂sql语句查询
+可在service层中调用本身的mybatis-plus的service接口方法，和mapper.java或mapper.xml进行xml或注解配合使用进行复杂sql语句的使用
 
 
-
-## Lad
 

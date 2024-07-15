@@ -87,9 +87,9 @@ void testUpdateWrapper2(){
 结果：
 
 ```bash
-20:07:42 DEBUG 28052 --- [           main] com.itheima.mp.mapper.UserMapper.update  : ==>  Preparing: UPDATE user SET balance = balance - 200 WHERE (id IN (?,?,?))
-20:07:42 DEBUG 28052 --- [           main] com.itheima.mp.mapper.UserMapper.update  : ==> Parameters: 1(Long), 2(Long), 4(Long)
-20:07:42 DEBUG 28052 --- [           main] com.itheima.mp.mapper.UserMapper.update  : <==    Updates: 3
+UPDATE user SET balance = balance - 200 WHERE (id IN (?,?,?))
+ Parameters: 1(Long), 2(Long), 4(Long)
+  Updates: 3
 ```
 
 ### Lambda
