@@ -159,8 +159,71 @@ Server: Docker Engine - Community
 
 至此，docker安装完成。
 
+## Docker关于启动指令
+
+```Bash
+# 启动Docker
+systemctl start docker
+
+# 停止Docker
+systemctl stop docker
+
+# 重启
+systemctl restart docker
+
+# 设置开机自启
+systemctl enable docker
+
+# 执行docker ps命令，如果不报错，说明安装启动成功
+docker ps
+```
+
+## 配置镜像加速服务
+
+配置阿里云镜像加速
+
+进入阿里云主页打开控制台
+
+![image-20240728171527370](https://yee-1312555989.cos.ap-guangzhou.myqcloud.com//blog202407281715965.webp)
+
+选择容器镜像服务
+
+![image-20240728171821345](https://yee-1312555989.cos.ap-guangzhou.myqcloud.com//blog202407281718861.webp)
+
+阿里云给出了加速地址和所需要的指令
+
+全部复制就行
+
+以linux为例
+
+::: code-group
+
+```bash[解释]
+sudo mkdir -p /etc/docker    -- 创建文件夹
+sudo tee /etc/docker/daemon.json <<-'EOF'    -- 输入文件，写入数据
+{
+  "registry-mirrors": ["https://xxxxxx.mirror.aliyuncs.com"]   --写入加速地址
+}
+EOF                      --退出
+sudo systemctl daemon-reload      --重新加载配置
+sudo systemctl restart docker	  --重启  
+```
 
 
 
+```bash[无注释版]
+sudo mkdir -p /etc/docker    
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://xxxxxx.mirror.aliyuncs.com"]
+}
+EOF
+sudo systemctl daemon-reload   
+sudo systemctl restart docker
+```
 
-> [Linux安装最新版Docker完整教程（建议收藏）_linux安装docker教程-CSDN博客](https://blog.csdn.net/weixin_43755251/article/details/127512751)
+
+
+:::
+
+> 参考[Linux安装最新版Docker完整教程（建议收藏）_linux安装docker教程-CSDN博客](https://blog.csdn.net/weixin_43755251/article/details/127512751)

@@ -60,7 +60,7 @@ export default withMermaid(
                 ]
               },
               { text: '数据库', link: '/db/' },
-              { text: '软件测试', link: '/test' },
+              { text: '软件测试', link: '/test/' },
               { text: 'Git', link: '/Git/' },
               { text: 'Docker', link: '/Docker/' },
 
@@ -286,6 +286,46 @@ export default withMermaid(
         '/Docker/': [
           { text: '介绍', link: '/Docker/' },
           { text: '安装', link: '/Docker/install' },
+          { text: '名词解释', link: '/Docker/' },
+          { text: '常用指令', link: '/Docker/' },
+          { text: '别名', link: '/Docker/' },
+          { text: '数据卷挂载', link: '/Docker/' },
+          { text: '自定义部署运行与DockerFile', link: '/Docker/' },
+          { text: '自定义镜像', link: '/Docker/' },
+          { text: '网络', link: '/Docker/' }, 
+          { text: 'DockerCompose', link: '/Docker/' },
+          { text: '实际示范', link: '/Docker/' },
+        ],
+        '/test/': [
+          { text: '软件测试', link: '/test/' },
+          {
+            text: '基础',
+            link: '/test/base/',
+            collapsed: true,
+            items: [
+              { text: '测试划分', link: '/test/base/测试划分' },
+              { text: '软件质量模型', link: '/test/base/质量模型' },
+              { text: '如何测试', link: '/test/base/test' },
+              { text: '非功能测试', link: '/test/base/非功能' },
+              { text: '用例文档', link: '/test/base/用例文档' },
+              { text: '判定表', link: '/test/base/判定表' },
+              { text: '用例执行', link: '/test/base/用例执行' },
+              { text: '缺陷与提交', link: '/test/base/缺陷' },
+              { text: '业务测试', link: '/test/base/业务测试' },
+              { text: '软件流程', link: '/test/base/测试流程' },
+              {
+                text: '实例项目',
+                link: '/test/project/',
+                items:[
+                  
+                ]
+              },
+            ]
+          },{
+            text:'App测试',
+            link:'/test/app/'
+          }
+          
         ]
 
 
