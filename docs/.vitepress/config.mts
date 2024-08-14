@@ -63,6 +63,15 @@ export default withMermaid(
               { text: '软件测试', link: '/test/' },
               { text: 'Git', link: '/Git/' },
               { text: 'Docker', link: '/Docker/' },
+              { text: 'Linux', link: '/Linux/' },
+              {
+                text: 'C#',
+                collapsed: true,
+                items: [
+                  { text: 'C#基础', link: '/c_sharp/' },
+                  { text: 'wpf', link: '/c_sharp/wpf' },
+                ]
+              },
 
 
 
@@ -232,13 +241,19 @@ export default withMermaid(
             ]
           }, {
             text: '多级缓存'
-            , items: []
+            , items: [
+
+            ]
           }, {
             text: '最佳实践'
-            , items: []
+            , items: [
+
+            ]
           }, {
             text: '原理篇'
-            , items: []
+            , items: [
+
+            ]
           }
 
 
@@ -292,7 +307,7 @@ export default withMermaid(
           { text: '数据卷挂载', link: '/Docker/' },
           { text: '自定义部署运行与DockerFile', link: '/Docker/' },
           { text: '自定义镜像', link: '/Docker/' },
-          { text: '网络', link: '/Docker/' }, 
+          { text: '网络', link: '/Docker/' },
           { text: 'DockerCompose', link: '/Docker/' },
           { text: '实际示范', link: '/Docker/' },
         ],
@@ -308,25 +323,179 @@ export default withMermaid(
               { text: '如何测试', link: '/test/base/test' },
               { text: '非功能测试', link: '/test/base/非功能' },
               { text: '用例文档', link: '/test/base/用例文档' },
-              { text: '判定表', link: '/test/base/判定表' },
               { text: '用例执行', link: '/test/base/用例执行' },
-              { text: '缺陷与提交', link: '/test/base/缺陷' },
-              { text: '业务测试', link: '/test/base/业务测试' },
-              { text: '软件流程', link: '/test/base/测试流程' },
+              { text: '缺陷与追踪', link: '/test/base/缺陷' },
+              { text: '软件测试流程', link: '/test/base/测试流程' },
+              { text: '测试报告', link: '/test/base/测试报告' },
               {
                 text: '实例项目',
                 link: '/test/project/',
-                items:[
-                  
+                items: [
+
                 ]
               },
             ]
-          },{
-            text:'App测试',
-            link:'/test/app/'
+          }, {
+            text: 'App测试',
+            link: '/test/app/',
+            items: [
+
+              { text: '自动化框架appium', link: '/test/auto/appium/' }
+            ]
+          }, {
+            text: '自动化测试',
+            collapsed: true,
+            items: [
+              {
+                text: 'unitTest',
+                collapsed: true,
+                items: [
+
+
+                  { text: 'unitTest介绍', link: '/test/auto/unitTest/' },
+                  { text: '', link: '' },
+                  { text: '', link: '' }
+
+
+                ]
+              },
+              {
+                text: 'selenium',
+                collapsed: true,
+                items: [
+                  { text: 'selenium介绍', link: '/test/auto/selenium/' },
+                  { text: 'selenium入门', link: '/test/auto/selenium/入门' },
+                  { text: 'selenium进阶', link: '/test/auto/selenium/进阶' },
+                  { text: 'selenium实战', link: '/test/auto/selenium/实战' },
+                ]
+              },
+              {
+                text: 'request',
+                collapsed: true,
+                items: [
+                  { text: 'request介绍', link: '/test/auto/request/' },
+                  { text: 'request入门', link: '/test/auto/request/入门' },
+                  { text: 'request进阶', link: '/test/auto/request/进阶' },
+                  { text: 'request实战', link: '/test/auto/request/实战' },
+                ]
+              },
+              {
+                text: 'pytest',
+                collapsed: true,
+                items: [
+                  { text: 'pytest介绍', link: '/test/auto/pytest/' },
+                  { text: 'pytest入门', link: '/test/auto/pytest/入门' },
+                  { text: 'pytest进阶', link: '/test/auto/pytest/进阶' },
+                  { text: 'pytest实战', link: '/test/auto/pytest/实战' },
+                ]
+              },
+              {
+                text: 'appium',
+                collapsed: true,
+                items: [
+                  { text: 'appium介绍', link: '/test/auto/appium/' },
+                  { text: 'appium入门', link: '/test/auto/appium/入门' },
+                  { text: 'appium进阶', link: '/test/auto/appium/进阶' },
+                  { text: 'appium实战', link: '/test/auto/appium/实战' },
+                ]
+              }
+
+            ]
+
           }
-          
-        ]
+
+        ],
+        '/Linux/': [
+          { text: '介绍', link: '/Linux/' },
+          {
+            text: '常用指令',
+            link: '/Linux/command/',
+            items: [
+              { text: '快捷键', link: '/Linux/command/file' },
+              { text: '文件夹、文件相关', link: '/Linux/command/file' },
+              { text: 'vim编辑器', link: '/Linux/command/vim' },
+              { text: '用户、用户组', link: '/Linux/command/user' },
+              { text: '权限', link: '/Linux/command/file' },
+              { text: '下载之yum', link: '/Linux/command/file' },
+              { text: 'systemctl自启动', link: '/Linux/command/file' },
+              { text: '软链接', link: '/Linux/command/file' },
+              { text: '网络', link: '/Linux/command/file' },
+
+              { text: '进程', link: '/Linux/command/file' },
+              { text: '磁盘内存与CPU', link: '/Linux/command/file' },
+              { text: '压缩与解压', link: '/Linux/command/zip' },
+              { text: '定时任务', link: '/Linux/command/cron' },
+            ]
+          },
+          {
+            text: '部署环境',
+            link: '/Linux/',
+            collapsed: false,
+            items: [
+              { text: 'Tomcat', link: '/Linux/deploy/Tomcat' },
+              { text: 'Nginx', link: '/Linux/deploy/Nginx' },
+              { text: 'Redis', link: '/Linux/deploy/Redis' },
+              { text: 'Mysql', link: '/Linux/deploy/Mysql' },
+            ]
+          },
+          {
+            text: 'Shell',
+            link: '/Linux/shell/',
+            items: [
+              { text: 'Shell介绍', link: '/Linux/shell/' },
+              { text: '运行', link: '/Linux/shell/run' },
+              { text: '变量', link: '/Linux/shell/var' },
+              { text: '运行时传参', link: '/Linux/shell/run_var' },
+              { text: '算术运算符', link: '/Linux/shell/operator' },
+              { text: 'if分支', link: '/Linux/shell/if' },
+              { text: 'case分支', link: '/Linux/shell/case' },
+              { text: 'for循环', link: '/Linux/shell/for' },
+              { text: 'while循环', link: '/Linux/shell/while' },
+              { text: '函数', link: '/Linux/shell/func' },
+
+
+            ]
+          }
+        ],
+        '/c_sharp/': [
+          { text: 'C#', link: '/c_sharp/' },
+          {
+            text: '基础',
+            items: [
+              { text: '介绍', link: '/c_sharp/base/' },
+              { text: '安装环境', link: '/c_sharp/base/install' },
+              { text: '框架介绍', link: '/c_sharp/base/frame' },
+              { text: '依赖管理', link: '/c_sharp/base/nuget' },
+              { text: '项目结构', link: '/c_sharp/base/project_struct' },
+              { text: 'C#代码结构', link: '/c_sharp/base/code_struct' },
+              { text: '变量', link: '/c_sharp/base/var' },
+              { text: '数据类型', link: '/c_sharp/base/data_type' },
+              { text: '运算符', link: '/c_sharp/base/operator' },
+              { text: '数组', link: '/c_sharp/base/array' },
+              { text: '字符串', link: '/c_sharp/base/string' },
+              { text: '结构体', link: '/c_sharp/base/struct' },
+              { text: '分支', link: '/c_sharp/base/branch' },
+              { text: '循环', link: '/c_sharp/base/loop' },
+              { text: '异常', link: '/c_sharp/base/exception' },
+              { text: '函数', link: '/c_sharp/base/func' },
+              { text: '枚举', link: '/c_sharp/base/enum' },
+              { text: '泛型', link: '/c_sharp/base/generic' },
+
+            ]
+          },
+          {
+            text: '面向对象篇',
+            items: [
+              { text: '类与对象', link: '/c_sharp/object/class' },
+              { text: '继承与多态', link: '/c_sharp/object/inherit' },
+              { text: '属性', link: '/c_sharp/object/property' },
+              { text: '方法', link: '/c_sharp/object/method' },
+            ]
+          },
+        ],
+        '/c_sharp/wpf/': [
+
+        ],
 
 
 
