@@ -60,3 +60,122 @@ font-size: 22px;
 code span,.text[data-v-3db96182]{
 	font-size: 15px;
 }*/
+
+/* 添加到你的 CSS 文件中，例如 styles/index.css */
+.task-list-item input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.task-list-item input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+}
+
+
+
+.vp-doc ul[class=contains-task-list]{
+    list-style: none;
+}
+
+
+//////不明白作用
+    .custom-checkbox {
+      position: relative;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+    }
+
+    .custom-checkbox input[type="checkbox"] {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .custom-checkbox .checkbox-box {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ddd;
+      border: 2px solid #bbb;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .custom-checkbox input[type="checkbox"]:checked + .checkbox-box {
+      background-color: #4caf50; /* 被选中时的颜色 */
+      border-color: #4caf50;
+    }
+
+    .custom-checkbox .checkbox-box::after {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background-color: white;
+      top: 4px;
+      left: 4px;
+      border-radius: 2px;
+      opacity: 0;
+    }
+
+    .custom-checkbox input[type="checkbox"]:checked + .checkbox-box::after {
+      opacity: 1;
+    }
+//////
+
+
+.vp-doc .custom-block.important {
+    border-color: #8100fa;
+    margin: 16px 0;
+}
+.custom-block.details summary {
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 0 0 18px;
+    font-weight: 700;
+    cursor: pointer;
+    user-select: none;
+}
+.details.custom-block{
+  border: 1px solid black;
+    background: white;
+}
+
+
+
+input[type=checkbox]{
+       width: 16px;
+       height: 16px;
+       background-color: #fff;
+       border: 1px solid #84aff6;
+       border-radius: 2px;
+       color: #fff;
+       text-align: center;
+       line-height: 15px;
+       -webkit-appearance: none;
+       appearance: none;
+       outline: none;
+   }
+   input[type="checkbox"]:hover {
+       border: 1px solid #4e8cf2;
+   }
+   input[type=checkbox]:checked {
+       color: #fff;
+       background-color: #4e8cf2;
+       border: 1px solid #4e8cf2;
+   }
+   input[type=checkbox]:after {
+       content: "\2713";
+   }
+
+img{
+	border: 2px solid #000;
+}
+.vp-doc hr {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    border: 2px dashed #db524f;
+    border-bottom: var(--hr-style);
+}

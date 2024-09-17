@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { withMermaid } from "vitepress-plugin-mermaid";
+import markdownItTaskLists from 'markdown-it-task-lists'; 
 
 export default withMermaid(
   // your existing vitepress config...
@@ -18,7 +19,10 @@ export default withMermaid(
     ],
     cleanUrls: true,
     markdown: {
-      lineNumbers: true
+      lineNumbers: true,
+      config:(md)=>{
+        md.use(markdownItTaskLists)
+      }
     },
     mermaid: {
       // refer https://mermaid.js.org/config/setup/modules/mermaidAPI.html#mermaidapi-configuration-defaults for options
@@ -56,6 +60,21 @@ export default withMermaid(
                   { text: 'Meavn', link: '/java/Meavn/' },
                   { text: 'SpringBoot', link: "/java/spring/" },
                   { text: 'SpringCloud', link: '/java/SpringCloud/' },
+
+                ]
+              },
+              {
+                text: '前端',
+                collapsed: true,
+                items: [
+                  { text: 'html', link: '/front-end/html/' },
+                  { text: 'css', link: '/front-end/css/' },
+                  { text: 'js', link: '/front-end/js/' },
+                  { text: 'ts', link: '/front-end/ts/' },
+                  { text: '框架前置', link: '/front-end/前置' },
+                  { text: 'vue', link: '/front-end/vue/' },
+                  { text: 'react', link: '/front-end/react/' },
+                  { text: 'nodejs', link: '/front-end/nodejs/' },
 
                 ]
               },
@@ -496,6 +515,14 @@ export default withMermaid(
         ],
         '/c_sharp/wpf/': [
 
+        ], '/front-end/vue/': [
+          { text: 'vue', link: '/front-end/vue/' },
+          { text: 'vue2', link: '/front-end/vue/vue2' },
+          { text: 'vue3', link: '/front-end/vue/vue3' },
+        ], '/front-end/vue/vue3/': [
+          { text: 'vue3', link: '/front-end/vue/vue3/' },
+          { text: '创建项目', link: '/front-end/vue/vue3/install' },
+          { text: '项目结构', link: '/front-end/vue/vue3/project' },
         ],
 
 
