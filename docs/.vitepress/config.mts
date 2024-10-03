@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { withMermaid } from "vitepress-plugin-mermaid";
-import markdownItTaskLists from 'markdown-it-task-lists'; 
+import markdownItTaskLists from 'markdown-it-task-lists';
 
 export default withMermaid(
   // your existing vitepress config...
@@ -20,7 +20,7 @@ export default withMermaid(
     cleanUrls: true,
     markdown: {
       lineNumbers: true,
-      config:(md)=>{
+      config: (md) => {
         md.use(markdownItTaskLists)
       }
     },
@@ -519,11 +519,86 @@ export default withMermaid(
           { text: 'vue', link: '/front-end/vue/' },
           { text: 'vue2', link: '/front-end/vue/vue2' },
           { text: 'vue3', link: '/front-end/vue/vue3' },
-        ], '/front-end/vue/vue3/': [
+        ],
+        '/front-end/vue/vue3/': [
           { text: 'vue3', link: '/front-end/vue/vue3/' },
           { text: '创建项目', link: '/front-end/vue/vue3/install' },
           { text: '项目结构', link: '/front-end/vue/vue3/project' },
+          { text: '组件', link: '/front-end/vue/vue3/component' },
+          { text: '模板语法', link: '/front-end/vue/vue3/temp' },
+          {
+            text: "指令",
+            link: '/front-end/vue/vue3/directive',
+            collapsed: true,
+            items: [
+              { text: 'v-if 判断', link: '/front-end/vue/vue3/directive/v-if' },
+              { text: 'v-for', link: '/front-end/vue/vue3/directive/v-for' },
+              { text: 'v-model', link: '/front-end/vue/vue3/directive/v-model' },
+              { text: 'v-show', link: '/front-end/vue/vue3/directive/v-show' },
+              { text: 'v-bind', link: '/front-end/vue/vue3/directive/v-bind' },
+              { text: 'v-on', link: '/front-end/vue/vue3/directive/v-on' },
+              { text: 'v-slot', link: '/front-end/vue/vue3/directive/v-slot' },
+              { text: '自定义指令', link: '/front-end/vue/vue3/directive/custom' },
+              { text: 'v-html', link: '/front-end/vue/vue3/directive/v-html' }
+            ]
+          },
+          { text: 'setup', link: '/front-end/vue/vue3/setup' },
+          { text: 'composition', link: '/front-end/vue/vue3/composition' },
+          { text: 'ref', link: '/front-end/vue/vue3/ref' },
+          { text: 'reactive', link: '/front-end/vue/vue3/reactive' },
+          { text: 'toRef 与 toRefs', link: '/front-end/vue/vue3/toRef' },
+          { text: 'computed', link: '/front-end/vue/vue3/computed' },
+          { text: 'watch 监听相关', link: '/front-end/vue/vue3/watch' },
+          { text: '生命周期', link: '/front-end/vue/vue3/lifeCycle' },
+          { text: 'Hooks', link: '/front-end/vue/vue3/hooks' },
+          { text: '路由', link: '/front-end/vue/vue3/router' },
+          { text: '插件', link: '/front-end/vue/vue3/plugin' },
+          { text: 'pinia', link: '/front-end/vue/vue3/pinia' },
+          {
+            text: '通信',
+            link: '/front-end/vue/vue3/communication',
+            collapsed: true,
+            items: [
+              { text: 'props', link: '/front-end/vue/vue3/communication/props' },
+              { text: 'emit', link: '/front-end/vue/vue3/communication/emit' },
+              { text: 'provide/inject', link: '/front-end/vue/vue3/communication/provide' },
+              { text: 'ref', link: '/front-end/vue/vue3/communication/ref' },
+            ],
+          },
+
         ],
+        '/front-end/react/': [
+          { text: 'react', link: '/front-end/react/' },
+          { text: 'jsx、tsx', link: '/front-end/react/jsx' },
+          { text: '组件', link: '/front-end/react/component' },
+
+
+        ],
+        '/front-end/前置/': [
+          {text: '前置', link: '/front-end/前置/'},
+          {
+            text: '网络',
+            link: '/front-end/前置/network',
+            items: [
+              {text:'网络协议', link: '/front-end/前置/network/protocol'},
+              {text:'ip', link: '/front-end/前置/network/ip'},
+              {text:'tcp', link: '/front-end/前置/network/tcp'},
+              {text:'socket', link: '/front-end/前置/network/socket'},
+
+              {text:'udp', link: '/front-end/前置/network/udp'},
+              {text:'dns', link: '/front-end/前置/network/dns'},
+              { text: 'http', link: '/front-end/前置/network/http' },
+              { text: 'https', link: '/front-end/前置/network/https' },
+              { text: '跨域', link: '/front-end/前置/network/cross' },
+              { text: '代理', link: '/front-end/前置/network/proxy' },
+              
+            ]
+
+          },{
+            text:'模块化',link: '/front-end/前置/module',
+          }
+
+        ]
 
 
 
