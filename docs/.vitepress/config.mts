@@ -569,33 +569,38 @@ export default withMermaid(
         ],
         '/front-end/react/': [
           { text: 'react', link: '/front-end/react/' },
+          { text: '安装', link: '/front-end/react/install' },
           { text: 'jsx、tsx', link: '/front-end/react/jsx' },
+          {text:'classnames', link: '/front-end/react/classnames' },
+          { text: 'useState', link: '/front-end/react/useState' },
+          {text:'useRef', link: '/front-end/react/useRef' },
+          { text: 'useEffect', link: '/front-end/react/useEffect' },
           { text: '组件', link: '/front-end/react/component' },
 
 
         ],
         '/front-end/前置/': [
-          {text: '前置', link: '/front-end/前置/'},
+          { text: '前置', link: '/front-end/前置/' },
           {
             text: '网络',
             link: '/front-end/前置/network',
             items: [
-              {text:'网络协议', link: '/front-end/前置/network/protocol'},
-              {text:'ip', link: '/front-end/前置/network/ip'},
-              {text:'tcp', link: '/front-end/前置/network/tcp'},
-              {text:'socket', link: '/front-end/前置/network/socket'},
+              { text: '网络协议', link: '/front-end/前置/network/protocol' },
+              { text: 'ip', link: '/front-end/前置/network/ip' },
+              { text: 'tcp', link: '/front-end/前置/network/tcp' },
+              { text: 'socket', link: '/front-end/前置/network/socket' },
 
-              {text:'udp', link: '/front-end/前置/network/udp'},
-              {text:'dns', link: '/front-end/前置/network/dns'},
+              { text: 'udp', link: '/front-end/前置/network/udp' },
+              { text: 'dns', link: '/front-end/前置/network/dns' },
               { text: 'http', link: '/front-end/前置/network/http' },
               { text: 'https', link: '/front-end/前置/network/https' },
               { text: '跨域', link: '/front-end/前置/network/cross' },
               { text: '代理', link: '/front-end/前置/network/proxy' },
-              
+
             ]
 
-          },{
-            text:'模块化',link: '/front-end/前置/module',
+          }, {
+            text: '模块化', link: '/front-end/前置/module',
           }
 
         ]
