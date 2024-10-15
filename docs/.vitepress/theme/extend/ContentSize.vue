@@ -85,8 +85,9 @@ const calculateWordCount = () => {
   const content = document.querySelector('.vp-doc')
   if (content) {
     // 计算字数，去除空白符
-    const text = content.innerText.length;
-    wordCount.value = text;
+    const text = content.innerText.match(/\S/g);
+
+    wordCount.value = text?text.length:0;
     // 替换多余空白符为一个空格1
     // const cleanedText = text.replace(/\s+/g, ' ');
 

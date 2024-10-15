@@ -5,7 +5,7 @@ import { useRouter, useRoute } from 'vitepress'
 const router = useRouter()
 const route = useRoute()
 const BeforeUrl = ref(router.path)
-const isNoMain = ref()
+const isNoMain = ref(route.path==='/main'? false:true)
 
 onMounted(() => {
 

@@ -2,7 +2,7 @@
 
 
 
-<pre>{{ page }}<hr></pre>
+
 
 
 
@@ -46,9 +46,7 @@ export default classname;
 ```
 
 <script setup>
-import { useData } from 'vitepress'
     import Classnamess from './classname.vue'
-    const { site, theme, page, frontmatter } = useData()
 </script>
 
 效果如下：
