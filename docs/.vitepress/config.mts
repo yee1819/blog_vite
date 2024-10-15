@@ -571,11 +571,20 @@ export default withMermaid(
           { text: 'react', link: '/front-end/react/' },
           { text: '安装', link: '/front-end/react/install' },
           { text: 'jsx、tsx', link: '/front-end/react/jsx' },
-          {text:'classnames', link: '/front-end/react/classnames' },
-          { text: 'useState', link: '/front-end/react/useState' },
-          {text:'useRef', link: '/front-end/react/useRef' },
-          { text: 'useEffect', link: '/front-end/react/useEffect' },
           { text: '组件', link: '/front-end/react/component' },
+          { text: 'classnames', link: '/front-end/react/classnames' },
+          { text: 'useState', link: '/front-end/react/useState' },
+          { text: 'Props', link: '/front-end/react/props' },
+          { text: 'useContext', link: '/front-end/react/useContext' },
+          { text: 'useRef', link: '/front-end/react/useRef' },
+          { text: 'useEffect', link: '/front-end/react/useEffect' },
+          
+          {text: 'useReducer', link: '/front-end/react/useReducer' },
+          { text: 'useImperativeHandle', link: '/front-end/react/useImperativeHandle' },
+          { text: 'useLayoutEffect', link: '/front-end/react/useLayoutEffect' },
+          { text: 'useCallback', link: '/front-end/react/useCallback' },
+          { text: 'useMemo', link: '/front-end/react/useMemo' },
+          
 
 
         ],
