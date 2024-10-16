@@ -515,7 +515,26 @@ export default withMermaid(
         ],
         '/c_sharp/wpf/': [
 
-        ], '/front-end/vue/': [
+        ],
+        '/front-end/':[
+          {
+            text: '前端',
+            link: '/front-end/',
+            items: [
+              { text: 'html', link: '/front-end/html/' },
+              { text: 'css', link: '/front-end/css/' },
+              { text: 'js', link: '/front-end/js/' },
+              { text: 'ts', link: '/front-end/ts/' },
+              { text: '框架前置', link: '/front-end/前置' },
+              { text: 'vue', link: '/front-end/vue/' },
+              { text: 'react', link: '/front-end/react/' },
+              { text: 'nodejs', link: '/front-end/nodejs/' },
+
+            ]
+          },
+        ]        
+        ,
+        '/front-end/vue/': [
           { text: 'vue', link: '/front-end/vue/' },
           { text: 'vue2', link: '/front-end/vue/vue2' },
           { text: 'vue3', link: '/front-end/vue/vue3' },
