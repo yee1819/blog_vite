@@ -516,7 +516,7 @@ export default withMermaid(
         '/c_sharp/wpf/': [
 
         ],
-        '/front-end/':[
+        '/front-end/': [
           {
             text: '前端',
             link: '/front-end/',
@@ -532,7 +532,7 @@ export default withMermaid(
 
             ]
           },
-        ]        
+        ]
         ,
         '/front-end/vue/': [
           { text: 'vue', link: '/front-end/vue/' },
@@ -550,10 +550,9 @@ export default withMermaid(
             link: '/front-end/vue/vue3/directive',
             collapsed: true,
             items: [
-              { text: 'v-if 判断', link: '/front-end/vue/vue3/directive/v-if' },
+              { text: 'v-if 判断 与 v-show', link: '/front-end/vue/vue3/directive/v-if-show' },
               { text: 'v-for', link: '/front-end/vue/vue3/directive/v-for' },
               { text: 'v-model', link: '/front-end/vue/vue3/directive/v-model' },
-              { text: 'v-show', link: '/front-end/vue/vue3/directive/v-show' },
               { text: 'v-bind', link: '/front-end/vue/vue3/directive/v-bind' },
               { text: 'v-on', link: '/front-end/vue/vue3/directive/v-on' },
               { text: 'v-slot', link: '/front-end/vue/vue3/directive/v-slot' },
@@ -584,6 +583,16 @@ export default withMermaid(
               { text: 'ref', link: '/front-end/vue/vue3/communication/ref' },
             ],
           },
+          {
+            text: '插槽',
+            link: '/front-end/vue/vue3/slot',
+            collapsed: true,
+            items: [
+              { text: '作用域插槽', link: '/front-end/vue/vue3/slot/scope' },
+              { text: '具名插槽', link: '/front-end/vue/vue3/slot/name' },
+              { text: '默认插槽', link: '/front-end/vue/vue3/slot/default' },
+            ],
+          }
 
         ],
         '/front-end/react/': [
@@ -597,13 +606,63 @@ export default withMermaid(
           { text: 'useContext', link: '/front-end/react/useContext' },
           { text: 'useRef', link: '/front-end/react/useRef' },
           { text: 'useEffect', link: '/front-end/react/useEffect' },
-          
-          {text: 'useReducer', link: '/front-end/react/useReducer' },
-          { text: 'useImperativeHandle', link: '/front-end/react/useImperativeHandle' },
-          { text: 'useLayoutEffect', link: '/front-end/react/useLayoutEffect' },
-          { text: 'useCallback', link: '/front-end/react/useCallback' },
-          { text: 'useMemo', link: '/front-end/react/useMemo' },
-          
+
+          { text: 'useReducer', link: '/front-end/react/useReducer' },
+          {
+            text: '第三方状态管理',
+            link: '/front-end/react/stateManagement/',
+            items: [
+              { text: 'Redux', link: '/front-end/react/stateManagement/redux' },
+              { text: 'Mobx', link: '/front-end/react/stateManagement/mobx' },
+              { text: 'Recoil', link: '/front-end/react/stateManagement/recoil' },
+              { text: 'Zustand', link: '/front-end/react/stateManagement/zustand' },
+            ]
+          },
+          {
+            text: '路由',
+            link: '/front-end/react/router/',
+            items: [
+              { text: 'react-router介绍', link: '/front-end/react/router/index' },
+              { text: '基本使用', link: '/front-end/react/router/base' },
+              { text: '路由导航', link: '/front-end/react/router/nav' },
+              { text: '路由参数', link: '/front-end/react/router/params' },
+              { text: '404', link: '/front-end/react/router/404' },
+              { text: '路由守卫', link: '/front-end/react/router/guard' },
+              { text: '嵌套路由', link: '/front-end/react/router/nested' },
+              { text: '默认路由', link: '/front-end/react/router/default' },
+              { text: '懒加载', link: '/front-end/react/router/lazy' },
+              { text: '路由模式', link: '/front-end/react/router/mode' },
+
+            ]
+          },
+
+          {
+            text: '性能优化',
+            link: '/front-end/react/performance/',
+            items: [
+              { text: 'useMemo', link: '/front-end/react/performance/useMemo' },
+              { text: 'useCallback', link: '/front-end/react/performance/useCallback' },
+            ]
+          },
+          {
+            text: '其他Hooks',
+            link: '/front-end/react/otherHooks',
+            items: [
+              { text: '自定义Hooks', link: '/front-end/react/otherHooks/custom' },
+              { text: 'useImperativeHandle', link: '/front-end/react/otherHooks/useImperativeHandle' },
+              { text: 'useLayoutEffect', link: '/front-end/react/otherHooks/useLayoutEffect' },
+              { text: 'useDebugValue', link: '/front-end/react/otherHooks/useDebugValue' },
+              { text: 'useDeferredValue', link: '/front-end/react/otherHooks/useDeferredValue' },
+              { text: 'useTransition', link: '/front-end/react/otherHooks/useTransition' },
+              { text: 'useId', link: '/front-end/react/otherHooks/useId' },
+              { text: 'useSyncExternalStore', link: '/front-end/react/otherHooks/useSyncExternalStore' },
+              { text: 'useInsertionEffect', link: '/front-end/react/otherHooks/useInsertionEffect' },
+
+            ]
+          },
+
+
+
 
 
         ],
@@ -611,7 +670,7 @@ export default withMermaid(
           { text: '前置', link: '/front-end/前置/' },
           {
             text: '网络',
-            link: '/front-end/前置/network',
+            link: '/front-end/前置/network/',
             items: [
               { text: '网络协议', link: '/front-end/前置/network/protocol' },
               { text: 'ip', link: '/front-end/前置/network/ip' },

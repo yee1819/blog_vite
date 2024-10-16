@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "garden"
-  text: "this my garden"
+  name: "Garden"
+  text: "This is my Garden"
   tagline: 付出精力培育出来的花园
   actions:
     - theme: brand
@@ -15,12 +15,16 @@ hero:
       link: "http://kiko2568.top"
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 花园
+    details: 
     icon: 🌺
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    link: ./main
+    linkText: 开始
+  - title: 
+    details: 
+    icon: 🌺
+  - title: 
+    details: 
+    icon: 🌺
 ---
 
