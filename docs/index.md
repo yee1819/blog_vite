@@ -21,7 +21,7 @@ features:
     link: ./main
     linkText: 开始
   - title: 
-    details: 
+    details: 花园，精心浇灌，花开满园
     icon: 🌺
   - title: 
     details: 
