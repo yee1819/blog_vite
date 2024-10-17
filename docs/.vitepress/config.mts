@@ -17,7 +17,7 @@ export default withMermaid(
     head: [
       ['link', { rel: 'stylesheet', href: 'https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/lxgwwenkaiscreen.min.css' }]
     ],
-    cleanUrls: true,
+
     markdown: {
       lineNumbers: true,
       config: (md) => {
