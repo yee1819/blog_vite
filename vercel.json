@@ -8,12 +8,7 @@
             }
         }
     ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/docs/.vitepress/dist/$1"
-        }
-    ],
+
     
     "cleanUrls": true ,
     
