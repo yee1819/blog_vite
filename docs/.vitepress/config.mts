@@ -24,8 +24,8 @@ export default withMermaid(
         md.use(markdownItTaskLists)
       }
     },
-    clearUrl: true
-    ,
+    
+    cleanUrls:true,
     mermaid: {
       // refer https://mermaid.js.org/config/setup/modules/mermaidAPI.html#mermaidapi-configuration-defaults for options
     },
