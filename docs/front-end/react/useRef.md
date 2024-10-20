@@ -52,3 +52,27 @@ export default function () {
 4. 使用：例如： ` inputRef.current.focus(); // 给输入框聚焦`，其中`inputRef.current`是Dom元素
 
 :::
+
+
+
+::: danger 注意 
+
+在 React 中，一个 ref 只能绑定到一个 DOM 元素上。这意味着你不能将同一个 ref 同时绑定到多个元素。
+
+解释：
+
+单一绑定：每个 ref 对象只能关联一个 DOM 元素或类组件实例。如果你尝试将同一个 ref 绑定到多个元素，只有最后绑定的元素会被引用。
+
+多个 ref 的使用：如果你需要引用多个元素，你可以为每个元素创建一个单独的 ref，或者使用数组或对象来存储多个 ref。 
+
+```javascript
+<Son changeString={changeString} inputRef={inputRef}/>
+
+<Son changeString={changeString} inputRef={inputRef}>123</Son>
+```
+
+
+
+  是不会双向绑定的
+
+:::

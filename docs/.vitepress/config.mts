@@ -24,8 +24,8 @@ export default withMermaid(
         md.use(markdownItTaskLists)
       }
     },
-    
-    cleanUrls:true,
+
+    cleanUrls: true,
     mermaid: {
       // refer https://mermaid.js.org/config/setup/modules/mermaidAPI.html#mermaidapi-configuration-defaults for options
     },
@@ -552,14 +552,18 @@ export default withMermaid(
             link: '/front-end/vue/vue3/directive',
             collapsed: true,
             items: [
-              { text: 'v-if 判断 与 v-show', link: '/front-end/vue/vue3/directive/v-if-show' },
-              { text: 'v-for', link: '/front-end/vue/vue3/directive/v-for' },
-              { text: 'v-model', link: '/front-end/vue/vue3/directive/v-model' },
-              { text: 'v-bind', link: '/front-end/vue/vue3/directive/v-bind' },
-              { text: 'v-on', link: '/front-end/vue/vue3/directive/v-on' },
-              { text: 'v-slot', link: '/front-end/vue/vue3/directive/v-slot' },
+              { text: 'text、pre、html', link: '/front-end/vue/vue3/directive/textprehtml' },
+              { text: 'v-if 判断 与 v-show', link: '/front-end/vue/vue3/directive/vifshow' },
+              { text: 'v-for', link: '/front-end/vue/vue3/directive/vfor' },
+              { text: 'v-bind', link: '/front-end/vue/vue3/directive/vbind' },
+              { text: 'v-model', link: '/front-end/vue/vue3/directive/vmodel' },
+              { text: 'v-on', link: '/front-end/vue/vue3/directive/von' },
+              { text: 'v-slot', link: '/front-end/vue/vue3/directive/vslot' },
               { text: '自定义指令', link: '/front-end/vue/vue3/directive/custom' },
-              { text: 'v-html', link: '/front-end/vue/vue3/directive/v-html' }
+              { text: 'v-once', link: '/front-end/vue/vue3/directive/vonce' },
+              { text: 'v-memo', link: '/front-end/vue/vue3/directive/vmemo' },
+              { text: 'v-cloak', link: '/front-end/vue/vue3/directive/vcloak' }
+
             ]
           },
           { text: 'setup', link: '/front-end/vue/vue3/setup' },
@@ -576,7 +580,7 @@ export default withMermaid(
           { text: 'pinia', link: '/front-end/vue/vue3/pinia' },
           {
             text: '通信',
-            link: '/front-end/vue/vue3/communication',
+            link: '/front-end/vue/vue3/communication/',
             collapsed: true,
             items: [
               { text: 'props', link: '/front-end/vue/vue3/communication/props' },
