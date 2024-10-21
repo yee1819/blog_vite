@@ -428,10 +428,176 @@ export default function PackingList() {
 
 使用Js的map函数实现遍历
 
+map 函数是一个返回经过处理的新  List、数组.....
+
+可以通过循环获取数组、对象、List等等每一个索引的值，并且返回经过处理后的全新数组、对象....
+
+参数可选，有三个
+
+```js
+array.map((item,index,arr)=>{
+	//item是操作的当前元素
+	//index是操作元素的下标
+	//arr是需要被操作的元素
+	//具体需要哪些参数 就传入那个
+})
+
+ const array = [2, 3, 4, 4, 5, 6]
+ console.log("原数组array为",array)
+ const map2=array.map((item,index,arr)=>{
+            console.log("操作的当前元素",item)
+            console.log("当前元素下标",index)
+            console.log("被操作的元素",arr)
+            //对元素乘以2
+            return item*2
+ })
+ console.log("处理之后先产生的数组map",map2)
+
+/**
+第一次循环运行结果如下
+原数组array为 (6) [2, 3, 4, 4, 5, 6]
+操作的当前元素 2
+当前元素下标 0
+被操作的元素 (6) [2, 3, 4, 4, 5, 6]
+*/
+```
+
+在jsx中使用
+
+```tsx
+import { useState } from 'react';
+
+function tabDemo() {
+    const [list, setList] = useState([1,2,3,4,5]);
+    return (
+        <>
+        <ul>
+            {list.map((item) => (
+                <li >{item}</li>
+            ))}
+        </ul>
+        </>
+
+
+    );
+}
+export default tabDemo;
+```
+
+此时控制台会报错，原因是需要有一个key作为索引
+
+```jsx
+import { useState } from 'react';
+
+function tabDemo() {
+    const [list, setList] = useState([1,2,3,4,5]);
+    return (
+        <>
+        <ul>
+            {list.map((item) => (
+                 <li key={item}>{item}</li>
+            ))}
+        </ul>
+        </>
+    );
+}
+export default tabDemo;
+```
+
+可以接收map函数第二个值index 索引作为唯一key
+
+```jsx
+import { useState } from 'react';
+
+function tabDemo() {
+    const [list, setList] = useState([1,2,3,4,5]);
+    return (
+        <>
+        <ul>
+            {list.map((item,index) => (
+                <li key={index}>{index}：{item}</li>
+            ))}
+        </ul>
+        </>
+    );
+}
+export default tabDemo;
+```
 
 
 
 
 
+---
 
-> 过滤器
+对于list还有许多种方法进行遍历或其他操作
+
+```tsx
+import { useState } from 'react';
+// import './App.css';
+
+function tabDemo() {
+  // const [count, setCount] = useState(0);
+  const json = [
+    { type: 'a', value: 1, id: 1 },
+    { type: 'a', value: 2, id: 2 },
+    { type: 'b', value: 2, id: 3 },
+    { type: 'c', value: 3, id: 4 },
+  ];
+
+  const [tt, setTt] = useState('a');
+
+  const [list, setList] = useState([1,2,3,4,5]);
+
+
+  const change = (t:any) => {
+    setTt(t);
+  }
+
+  // 获取唯一的 type
+  const uniqueTypes = [...new Set(json.map(item => item.type))];
+
+  return (
+    <>
+      {list.reduce((acc,item)=>{
+        return acc + item;
+      })}
+
+      <ul>
+        {list.map((item,index) => (
+          <li key={index}>{index}：{item}</li>
+        ))}
+      </ul>
+      <ul>
+        {list.splice(2).map((item,index) => (
+          <li key={index}>{index}：{item}</li>
+        ))}
+      </ul>
+
+
+      <ul>
+        {uniqueTypes.map((type) => (
+          <li key={type} onClick={()=>change(type)}>
+            {type}
+            
+          </li>
+        ))}
+      </ul>
+      <ul>
+              {json
+                .filter(item => item.type === tt  )
+                .map(item => (
+                  <li key={item.id}>{item.value}</li>
+                ))}
+            </ul>
+    </>
+  );
+}
+export default tabDemo;
+```
+
+
+
+
+
+> filter、reduce、map、splice、sort、find、forEach......
