@@ -575,7 +575,7 @@ export default withMermaid(
           { text: 'watch 监听相关', link: '/front-end/vue/vue3/watch' },
           { text: '生命周期', link: '/front-end/vue/vue3/lifeCycle' },
           { text: 'Hooks', link: '/front-end/vue/vue3/hooks' },
-          { text: '路由', link: '/front-end/vue/vue3/router' },
+          { text: 'ref属性获取dom', link: '/front-end/vue/vue3/refAttr' },
           { text: '插件', link: '/front-end/vue/vue3/plugin' },
           { text: 'pinia', link: '/front-end/vue/vue3/pinia' },
           {
@@ -584,10 +584,31 @@ export default withMermaid(
             collapsed: true,
             items: [
               { text: 'props', link: '/front-end/vue/vue3/communication/props' },
-              { text: 'emit', link: '/front-end/vue/vue3/communication/emit' },
+              { text: 'emit 自定义事件', link: '/front-end/vue/vue3/communication/emits' },
+              { text: 'mitt', link: '/front-end/vue/vue3/communication/mitt' },
+              {text:'v-model',link:'/front-end/vue/vue3/communication/vmodel'},
               { text: 'provide/inject', link: '/front-end/vue/vue3/communication/provide' },
               { text: 'ref', link: '/front-end/vue/vue3/communication/ref' },
             ],
+          }, {
+            text: '路由',
+            link: '/front-end/vue/vue3/router',
+            items: [
+
+              { text: '基本使用', link: '/front-end/vue/vue3/router/basic' },
+              { text: '跳转', link: '/front-end/vue/vue3/router/goto' },
+              { text: '路由参数', link: '/front-end/vue/vue3/router/params' },
+
+              { text: '重定向', link: '/front-end/vue/vue3/router/redirect' },
+              { text: '嵌套路由', link: '/front-end/vue/vue3/router/nest' },
+              { text: '404', link: '/front-end/vue/vue3/router/404' },
+
+              { text: 'keep-alive', link: '/front-end/vue/vue3/router/keep-alive' },
+              { text: '路由缓存', link: '/front-end/vue/vue3/router/cache' },
+              { text: '路由懒加载', link: '/front-end/vue/vue3/router/lazy' },
+              { text: '路由元信息', link: '/front-end/vue/vue3/router/meta' },
+
+            ]
           },
           {
             text: '插槽',
