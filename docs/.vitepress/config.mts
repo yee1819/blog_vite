@@ -632,6 +632,7 @@ export default withMermaid(
           { text: 'Props', link: '/front-end/react/props' },
           { text: 'useContext', link: '/front-end/react/useContext' },
           { text: 'useRef', link: '/front-end/react/useRef' },
+          {text:'forwardRef',link:'/front-end/react/forwardRef'},
           { text: 'useEffect', link: '/front-end/react/useEffect' },
 
           { text: 'useReducer', link: '/front-end/react/useReducer' },
