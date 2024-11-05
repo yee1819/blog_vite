@@ -668,6 +668,7 @@ export default withMermaid(
             link: '/front-end/react/performance/',
             items: [
               { text: 'useMemo', link: '/front-end/react/performance/useMemo' },
+              {text:'Memo',link:'/front-end/react/performance/memo'},
               { text: 'useCallback', link: '/front-end/react/performance/useCallback' },
             ]
           },
