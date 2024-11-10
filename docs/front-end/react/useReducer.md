@@ -1,5 +1,7 @@
 React 内置的状态管理
 
+## 基本使用
+
 `useReducer` 有至少需要两个参数，`reducer` 状态变化函数、`initialState` 初始值、以及可以省略的初始化函数
 
 `reducer` 自定义，有俩个入参(state、action)状态与动作
@@ -136,3 +138,6 @@ export default gg
 :::
 
 与useState 一样，应该用替代的思想更新State而不是改变。此时执行更新State操作的时候，对象、数组这类复杂类型就需要新对象新数组来实现。
+
+## 配合useContext实现全页面状态管理
+

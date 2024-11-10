@@ -717,6 +717,17 @@ export default withMermaid(
 
           }, {
             text: '模块化', link: '/front-end/前置/module',
+          },{
+            text:'网络请求',link:'/front-end/前置/request',
+            items:[
+              {text:'axios',link:'/front-end/前置/request/axios'},
+              {text:'fetch',link:'/front-end/前置/request/fetch'},
+              {text:'jsonp',link:'/front-end/前置/request/jsonp'},
+              {text:'mock',link:'/front-end/前置/request/mock'},
+              {text:'cors',link:'/front-end/前置/request/cors'},
+              {text:'prefetch',link:'/front-end/前置/request/prefetch'}
+              
+            ]
           }
 
         ]
