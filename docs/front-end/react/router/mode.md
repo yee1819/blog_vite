@@ -159,3 +159,9 @@ function App() {
 - **`BrowserRouter`**：适用于常规的 Web 应用，使用 HTML5 History API，路由信息在浏览器的地址栏中体现。
 - **`HashRouter`**：适用于没有服务器配置支持的环境，使用 URL 中的 hash 部分（`#` 后面的内容）来控制路由。
 - **`MemoryRouter`**：适用于测试、服务端渲染（SSR）或嵌入式应用，路由信息保存在内存中，不依赖于浏览器的地址栏。
+
+
+
+## 其他
+
+.....
