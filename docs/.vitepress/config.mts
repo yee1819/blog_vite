@@ -83,6 +83,7 @@ export default withMermaid(
               { text: '数据库', link: '/db/' },
               { text: '软件测试', link: '/test/' },
               { text: 'Git', link: '/Git/' },
+              {text:'Nginx',link:'/Nginx/'},
               { text: 'Docker', link: '/Docker/' },
               { text: 'Linux', link: '/Linux/' },
               {
@@ -731,6 +732,42 @@ export default withMermaid(
             ]
           }
 
+        ],
+        '/Git/':[
+          {text:'Git',link:'/Git/'},
+          {text:'常用',link:'/Git/常用'},
+          {text:'日志',link:'/Git/log'},
+          {text:'分支',link:'/Git/branch'},
+          {text:'回退',link:'/Git/reset'},
+          {text:'远程仓库',link:'/Git/remote'},
+          {text:'github连接',link:'/Git/github'},
+          {text:'stash贮藏',link:'/Git/stash'},
+          {text:'cherry-pick',link:'/Git/cherry-pick'},
+          {text:"检索",link:'/Git/grep'},
+          {text:'版本差异',link:'/Git/diff'},
+          {text:'溯源',link:'/Git/blame'},
+          {text:'撤销',link:'/Git/revert'},
+          // {text:'合并',link:'/Git/merge'},
+          {text:'标签',link:'/Git/tag'},
+          {text:'clean清理',link:'/Git/clean'},
+          {text:'删除文件',link:'/Git/rm'},
+          {text:'worktree工作目录',link:'/Git/worktree'},
+          {text:'别名',link:'/Git/alias'},
+          {text:'flow分支管理系统',link: '/Git/flow'},
+          // {text:'远程仓库操作',link:'/Git/remoteOperation'},
+          {text:'gitignore',link:'/Git/gitignore'},
+          {text:'git 配置',link:'/Git/config'},
+          // {text:'git 命令',link:'/Git/command'},
+        ],
+        '/Nginx/':[
+          {text:'Nginx',link:'/Nginx/'},
+          {text:'Nginx安装与简单运行',link:'/Nginx/run'},
+          {text:'Nginx配置',link: '/Nginx/config'},
+          {text:'Nginx负载均衡',link:'/Nginx/loadBalance'},
+          {text:'Nginx反向代理',link:'/Nginx/roxy'},
+          // {text:'Nginx缓存',link:'/Nginx/cache'},
+          // {text:'Nginx日志',link:'/Nginx/log'},
+          // {text:'Nginx日志切割',link:'/Nginx/logRotate'},
         ]
 
 
