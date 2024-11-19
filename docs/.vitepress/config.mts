@@ -551,7 +551,7 @@ export default withMermaid(
           {
             text: "指令",
             link: '/front-end/vue/vue3/directive',
-            collapsed: true,
+            collapsed: false,
             items: [
               { text: 'text、pre、html', link: '/front-end/vue/vue3/directive/textprehtml' },
               { text: 'v-if 判断 与 v-show', link: '/front-end/vue/vue3/directive/vifshow' },
