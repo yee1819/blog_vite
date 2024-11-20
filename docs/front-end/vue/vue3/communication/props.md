@@ -176,3 +176,152 @@ export default defineComponent({
 
 
 :::
+
+
+
+## props 校验类型
+
+官方的示例写的很好：
+
+type  可选:
+
+- `String`
+- `Number`
+- `Boolean`
+- `Array`
+- `Object`
+- `Date`
+- `Function`
+- `Symbol`
+- `Error`
+- 自定义类型
+
+```typescript
+defineProps({
+  // 基础类型检查
+  // （给出 `null` 和 `undefined` 值则会跳过任何类型检查）
+  propA: Number,
+  // 多种可能的类型
+  propB: [String, Number],
+  // 必传，且为 String 类型
+  propC: {
+    type: String,
+    required: true
+  },
+  // 必传但可为 null 的字符串
+  propD: {
+    type: [String, null],
+    required: true
+  },
+  // Number 类型的默认值
+  propE: {
+    type: Number,
+    default: 100
+  },
+  // 对象类型的默认值
+  propF: {
+    type: Object,
+    // 对象或数组的默认值
+    // 必须从一个工厂函数返回。
+    // 该函数接收组件所接收到的原始 prop 作为参数。
+    default(rawProps) {
+      return { message: 'hello' }
+    }
+  },
+  // 自定义类型校验函数
+  // 在 3.4+ 中完整的 props 作为第二个参数传入
+  propG: {
+    validator(value, props) {
+      // The value must match one of these strings
+      return ['success', 'warning', 'danger'].includes(value)
+    }
+  },
+  // 函数类型的默认值
+  propH: {
+    type: Function,
+    // 不像对象或数组的默认，这不是一个
+    // 工厂函数。这会是一个用来作为默认值的函数
+    default() {
+      return 'Default function'
+    }
+  },
+    propsI:{
+        // 自定义类型
+        type: Person
+        
+    },
+    propsJ:{
+        //如果该类型是必传但可为 null 的，你可以用一个包含 `null` 的数组语法：
+         type: [String, null],
+  		 required: true
+    },
+    propsK:{
+        // type 仅为 null 而非使用数组语法，它将允许任何类型。
+        type: null
+    }
+})
+
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName
+    this.lastName = lastName
+  }
+}
+```
+
+细节：
+
+-  props默认可选，声明`required: true`后必传。
+- 可选props  默认值`undefined`，boolean除外（被转化为false，默认值可以通过`default: undefined`修改一致
+- 设置默认值后，是否传递过来props ，只要是解析为`undefined`，自动修改为`defalut`
+
+其中Boolean传值
+
+```js
+defineProps({
+  disabled: Boolean
+})
+```
+
+可以这样传
+
+```vue
+<!-- 等同于传入 :disabled="true" -->
+<MyComponent disabled />
+
+<!-- 等同于传入 :disabled="false" -->
+<MyComponent />
+```
+
+但是如果声明多种类型，该规则也适用，例外：String声明在Boolean前时情况不一样
+
+
+
+```js
+// disabled 将被转换为 true
+defineProps({
+  disabled: [Boolean, Number]
+})
+
+// disabled 将被转换为 true
+defineProps({
+  disabled: [Boolean, String]
+})
+
+// disabled 将被转换为 true
+defineProps({
+  disabled: [Number, Boolean]
+})
+
+// disabled 将被解析为空字符串 (disabled="")
+defineProps({
+  disabled: [String, Boolean]
+})
+```
+
+
+
+
+
+
+

@@ -201,7 +201,67 @@ onMounted(() => console.log(itemRefs.value))
 
 ## 组件
 
-获取组件元素
+获取组件实例
 
-- [ ] TODO
+```vue
+<script setup>
+import { useTemplateRef, onMounted } from 'vue'
+import Child from './Child.vue'
 
+const childRef = useTemplateRef('child')
+
+onMounted(() => {
+  // childRef.value 将持有 <Child /> 的实例
+})
+</script>
+
+<template>
+  <Child ref="child" />
+</template>
+```
+
+
+
+3.5以前
+
+```vue
+<script setup>
+import { ref, onMounted } from 'vue'
+import Child from './Child.vue'
+
+const child = ref(null)
+
+onMounted(() => {
+  // child.value 是 <Child /> 组件的实例
+})
+</script>
+
+<template>
+  <Child ref="child" />
+</template>
+```
+
+子组件使用选项式`api` 或`setup()`时，拥有子组件绝对访问权限
+
+但是如果是组合式`<script setup></script>`时，子组件是私有的
+
+需要 `defineExpose` 宏显式暴露
+
+```vue
+<script setup>
+import { ref } from 'vue'
+
+const a = 1
+const b = ref(2)
+
+// 像 defineExpose 这样的编译器宏不需要导入
+defineExpose({
+  a,
+  b
+})
+</script>
+```
+
+
+
+当父组件通过模板引用获取到了该组件的实例时，得到的实例类型为` { a: number, b: number } `(ref 都会自动解包，和一般的实例一样)。
