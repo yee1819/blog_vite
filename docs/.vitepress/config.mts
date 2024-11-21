@@ -746,6 +746,7 @@ export default withMermaid(
                   { text: 'fetch请求头', link: '/front-end/前置/request/fetch/Headers' },
                   // { text: 'fetch配置', link: '/front-end/前置/request/fetch/config' },
                   { text: '封装拦截器', link: '/front-end/前置/request/fetch/interceptor' },
+                  {text:'取消请求',link: '/front-end/前置/request/fetch/cancel'}
                 ]
               },
               { text: 'jsonp', link: '/front-end/前置/request/jsonp' },
