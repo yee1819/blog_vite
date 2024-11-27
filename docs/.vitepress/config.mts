@@ -106,7 +106,10 @@ export default withMermaid(
         ],
         '/java/spring/': [
           { text: '前言', link: '/java/spring/' },
-          { text: 'SpringBoot', link: '/java/spring/SpringBoot入门' },
+          { 
+            text: 'SpringBoot', 
+            link: '/java/spring/SpringBoot入门' 
+          },
         ],
         '/db/': [
           {
@@ -123,6 +126,57 @@ export default withMermaid(
         ],
         '/db/MySql/': [
           { text: 'MySql', link: '/db/MySql/' },
+          { text: '概念', link: '/db/MySql/概念' },
+          {
+            text: 'DDL-数据库操作',
+            link: '/db/MySql/DDL',
+            items: [
+              { text: 'DDL', link: '/db/MySql/DDL/' },
+              { text: '数据库创建与删除', link: '/db/MySql/DDL/database' },
+              { text: '表的操作', link: '/db/MySql/DDL/table' },
+              { text: '字段的操作', link: '/db/MySql/DDL/field' },
+              { text: '索引的操作', link: '/db/MySql/DDL/tableindex' },
+              { text: '指令', link: '/db/MySql/DDL/command' }
+
+            ]
+          }
+          ,
+          {
+            text: 'DML-数据操作',
+            link: '/db/MySql/DML',
+            items: [
+              { text: 'DML简介', link: "/db/MySql/DML/" },
+              { text: '数据插入insert', link: '/db/MySql/DML/insert' },
+              { text: '数据修改update', link: '/db/MySql/DML/update' },
+              { text: '数据删除delete', link: '/db/MySql/DML/delete' },
+            ]
+
+          },
+          {
+            text: 'DQL-数据查询',
+            link: '/db/MySql/DQL',
+            items: [
+              { text: '数据查询', link: '/db/MySql/DQL' },
+              { text: '运算符', link: '/db/MySql/DQL/operator' },
+              { text: '数据查询select', link: '/db/MySql/DQL/select' },
+              { text: '多表查询', link: '/db/MySql/DQL/multi-table-query' },
+              { text: '子查询', link: '/db/MySql/DQL/sub-query' },
+              { text: '聚合函数', link: '/db/MySql/DQL/aggregate-function' },
+              { text: '集合', link: '/db/MySql/DQL/set' },
+              { text: '正则表达式', link: '/db/MySql/DQL/regular-expression' }
+            ]
+
+          },
+          { text: '事务', link: '/db/MySql/transaction' },
+          { text: '视图', link: '/db/MySql/view' },
+          { text: '锁', link: '/db/MySql/lock' },
+          { text: '存储引擎', link: '/db/MySql/存储引擎' },
+          { text: '存储过程', link: '/db/MySql/存储过程' },
+          { text: '存储函数', link: '/db/MySql/function' },
+          { text: '触发器', link: '/db/MySql/触发器' },
+          { text: '数据库备份', link: '/db/MySql/数据库备份' },
+          { text: '数据库优化', link: '/db/MySql/数据库优化' },
+
         ]
         ,
         '/db/Redis/': [
@@ -611,17 +665,7 @@ export default withMermaid(
 
             ]
           },
-          {
-            text: '插槽',
-            link: '/front-end/vue/vue3/slot',
-            collapsed: true,
-            items: [
-              { text: '作用域插槽', link: '/front-end/vue/vue3/slot/scope' },
-              { text: '具名插槽', link: '/front-end/vue/vue3/slot/name' },
-              { text: '默认插槽', link: '/front-end/vue/vue3/slot/default' },
-            ],
-          }
-
+          { text: '插槽',  link: '/front-end/vue/vue3/slot',}
         ],
         '/front-end/react/': [
           { text: 'react', link: '/front-end/react/' },
@@ -746,7 +790,7 @@ export default withMermaid(
                   { text: 'fetch请求头', link: '/front-end/前置/request/fetch/Headers' },
                   // { text: 'fetch配置', link: '/front-end/前置/request/fetch/config' },
                   { text: '封装拦截器', link: '/front-end/前置/request/fetch/interceptor' },
-                  {text:'取消请求',link: '/front-end/前置/request/fetch/cancel'}
+                  { text: '取消请求', link: '/front-end/前置/request/fetch/cancel' }
                 ]
               },
               { text: 'jsonp', link: '/front-end/前置/request/jsonp' },
@@ -793,7 +837,8 @@ export default withMermaid(
           // {text:'Nginx缓存',link:'/Nginx/cache'},
           // {text:'Nginx日志',link:'/Nginx/log'},
           // {text:'Nginx日志切割',link:'/Nginx/logRotate'},
-        ]
+        ],
+
 
 
 

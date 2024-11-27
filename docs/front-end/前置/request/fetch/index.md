@@ -128,6 +128,7 @@ fetch('https://example.com/image.png')
     const url = URL.createObjectURL(blob);
     console.log(url); // 可用作图片的 src
   });
+  
 ```
 
 
@@ -153,6 +154,12 @@ fetch('https://api.example.com/data', { signal: controller.signal })
 
 
 :::
+
+TODO 
+
+提交表单、提交文件
+
+
 
 注意事项：
 
