@@ -643,7 +643,8 @@ export default withMermaid(
               { text: 'mitt', link: '/front-end/vue/vue3/communication/mitt' },
               { text: 'v-model', link: '/front-end/vue/vue3/communication/vmodel' },
               { text: 'provide/inject', link: '/front-end/vue/vue3/communication/provide' },
-              { text: 'ref', link: '/front-end/vue/vue3/communication/ref' },
+              {text:'透传attribute',link:'/front-end/vue/vue3/communication/attribute'},
+              { text: 'defineExpose通过parent与ref暴露元素', link: '/front-end/vue/vue3/communication/defineExpose' },
             ],
           }, {
             text: '路由',
@@ -665,7 +666,12 @@ export default withMermaid(
 
             ]
           },
-          { text: '插槽',  link: '/front-end/vue/vue3/slot',}
+          { text: '插槽',  link: '/front-end/vue/vue3/slot',},
+          {text:'渲染函数',link: '/front-end/vue/vue3/renderH'},
+          {text:'nextTick',link: '/front-end/vue/vue3/nextTick'},
+          {text:'动画过渡效果',link:'/front-end/vue/vue3/transition'},
+          {text:'异步Suspense',link: '/front-end/vue/vue3/Suspense'}
+
         ],
         '/front-end/react/': [
           { text: 'react', link: '/front-end/react/' },
