@@ -106,9 +106,9 @@ export default withMermaid(
         ],
         '/java/spring/': [
           { text: '前言', link: '/java/spring/' },
-          { 
-            text: 'SpringBoot', 
-            link: '/java/spring/SpringBoot入门' 
+          {
+            text: 'SpringBoot',
+            link: '/java/spring/SpringBoot入门'
           },
         ],
         '/db/': [
@@ -643,7 +643,7 @@ export default withMermaid(
               { text: 'mitt', link: '/front-end/vue/vue3/communication/mitt' },
               { text: 'v-model', link: '/front-end/vue/vue3/communication/vmodel' },
               { text: 'provide/inject', link: '/front-end/vue/vue3/communication/provide' },
-              {text:'透传attribute',link:'/front-end/vue/vue3/communication/attribute'},
+              { text: '透传attribute', link: '/front-end/vue/vue3/communication/attribute' },
               { text: 'defineExpose通过parent与ref暴露元素', link: '/front-end/vue/vue3/communication/defineExpose' },
             ],
           }, {
@@ -652,9 +652,9 @@ export default withMermaid(
             items: [
 
               { text: '基本使用', link: '/front-end/vue/vue3/router/basic' },
-              { text: '跳转', link: '/front-end/vue/vue3/router/goto' },
+              { text: '导航', link: '/front-end/vue/vue3/router/goto' },
               { text: '路由参数', link: '/front-end/vue/vue3/router/params' },
-
+              {text:'useRoute/useRouter',link:'/front-end/vue/vue3/router/useRoute'},
               { text: '重定向', link: '/front-end/vue/vue3/router/redirect' },
               { text: '嵌套路由', link: '/front-end/vue/vue3/router/nest' },
               { text: '404', link: '/front-end/vue/vue3/router/404' },
@@ -666,11 +666,11 @@ export default withMermaid(
 
             ]
           },
-          { text: '插槽',  link: '/front-end/vue/vue3/slot',},
-          {text:'渲染函数',link: '/front-end/vue/vue3/renderH'},
-          {text:'nextTick',link: '/front-end/vue/vue3/nextTick'},
-          {text:'动画过渡效果',link:'/front-end/vue/vue3/transition'},
-          {text:'异步Suspense',link: '/front-end/vue/vue3/Suspense'}
+          { text: '插槽', link: '/front-end/vue/vue3/slot', },
+          { text: '渲染函数', link: '/front-end/vue/vue3/renderH' },
+          { text: 'nextTick', link: '/front-end/vue/vue3/nextTick' },
+          { text: '动画过渡效果', link: '/front-end/vue/vue3/transition' },
+          { text: '异步Suspense', link: '/front-end/vue/vue3/Suspense' }
 
         ],
         '/front-end/react/': [
@@ -712,6 +712,7 @@ export default withMermaid(
               { text: '默认路由', link: '/front-end/react/router/default' },
               { text: '懒加载', link: '/front-end/react/router/lazy' },
               { text: '路由模式', link: '/front-end/react/router/mode' },
+              { text: '加载数据与表单', link: '/front-end/react/router/From' }
 
             ]
           },
